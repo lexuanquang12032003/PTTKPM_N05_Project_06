@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/home.css">
+    <link rel="stylesheet" href="./assets//fonts/fontawesome-free-6.4.0-web/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app">
+        <header class="header">
+            <div class="grid">
+                <div class="grid__row">
+                    <div class="grid__column-1">
+                        <a href="" class="header__logo-link">
+                            <img src="https://monngonmoingay.com/wp-content/uploads/2020/10/logo-aji-copy-3.png.webp" alt="" class="header__logo-img">
+                        </a>
+                    </div>
+                    <div class="grid__column-1">
+                        <a href="" class="header__logo-link">
+                            <img src="https://monngonmoingay.com/wp-content/uploads/2020/10/logo-mnmn.png.webp" alt="" class="header__logo-img">
+                        </a>
+                    </div>
+                    <div class="grid__column-1">
+                        <a href="" class="header__logo-link">
+                            <img src="	https://monngonmoingay.com/wp-content/uploads/2022/07/nau-chuan-an-lanh-mnmn.png" alt="" class="header__logo-img">
+                        </a>
+                    </div>
+                    <div class="grid__column-9">
+                        <div class="header__top">
+                            <span class="login">Đăng Nhập</span>
+                            <span class="seperate">|</span>
+                            <span class="register">
+                                <span href="" class="register-link">Đăng Ký</span>
+                            </span>
+                        </div>
+                        <nav class="header__navbar">
+                            <ul class="header__navbar-list">
+                                <li class="header__navbar-item">
+                                    <a href="" class="header__navbar-item-link">Danh Mục Thực Đơn</a>
+                                </li>
+                                <li class="header__navbar-item">
+                                    <a href="" class="header__navbar-item-link">Kế Hoạch Nấu Ăn</a>
+                                </li>
+                                <li class="header__navbar-item">
+                                    <a href="" class="header__navbar-item-link">Gia Vị Bạn Cần</a>
+                                </li>
+                                <li class="header__navbar-item1">
+                                    <a href="" class="header__navbar-item-link">Thông Tin Hữa Ích</a>
+                                    <div class="header__navbar-info">
+                                        <ul class="header__navbar-info-list">
+                                            <li class="header__navbar-info-item">
+                                                <a href="" class="header__navbar-info-link">
+                                                    Thông tin dinh dưỡng
+                                                </a>
+                                            </li>
+                                            <li class="header__navbar-info-item">
+                                                <a href="" class="header__navbar-info-link">
+                                                    Mách nhỏ
+                                                </a>
+                                            </li>
+                                            <li class="header__navbar-info-item">
+                                                <a href="" class="header__navbar-info-link1">
+                                                    Hỏi đáp
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- search -->
+        <div class="search">
+            <div class="grid blocksearch">
+                <div class="grid__row">
+                    <div class="grid__column-2"></div>
+                    <div class="grid__column-8">
+                        <div class="grid__row">
+                            <div class="grid__column-9">
+                                <h4 class="search__title">Tìm kiếm công thức, nguyên liệu, cách nấu, dịp nấu,...</h4>
+                            </div>
+                            <div class="grid__column-3">
+                            </div>
+                        </div>
+                        <div class="searchbox">
+                            <div class="search__input">
+                                <input type="text" id="searchInput" class="search__input-text" placeholder="Nhập tại đây..." class="placeholder-color">
+                                <button id="searchButton" class="search__input-btn">
+                                    <i class="search__input-btn-icon fa-solid fa-magnifying-glass"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid__column-2"></div>
+                </div>
+            </div>
+        </div>
+        <!-- filter -->
+        <!-- <div class="filter">
+            <div class="grid grid-padding">
+                <div class="grid__row">
+                    <div class="grid__column-detailmain">
+                        <div class="filter__category">
+                            <ul class="filter__category-list">
+                                <li class="filter__category-item nguyenlieu">
+                                    NGUYÊN LIỆU
+                                    <i class="filter__category-icon fa-solid fa-caret-down"></i>
+                                </li>
+                                <li class="filter__category-item cachnau">
+                                    CÁCH NẤU 
+                                    <i class="filter__category-icon fa-solid fa-caret-down"></i>
+                                </li>
+                                <li class="filter__category-item diple">
+                                    DỊP LỄ
+                                    <i class="filter__category-icon fa-solid fa-caret-down"></i>
+                                </li>
+                                <li class="filter__category-item monan">
+                                    MÓN ĂN
+                                    <i class="filter__category-icon fa-solid fa-caret-down"></i>
+                                </li>
+                                <li class="filter__category-item giadinh">
+                                    GIA ĐÌNH
+                                    <i class="filter__category-icon fa-solid fa-caret-down"></i>
+                                </li>
+                                <li class="filter__category-item vungmien">
+                                    VÙNG MIỀN
+                                    <i class="filter__category-icon fa-solid fa-caret-down"></i>
+                                </li>
+                                <li class="filter__category-item dinhduong">
+                                    DINH DƯỠNG
+                                    <i class="filter__category-icon fa-solid fa-caret-down"></i>
+                                </li>
+                                <li class="filter__category-item xotnuoccham">
+                                    XỐT/NƯỚC CHẤM
+                                    <i class="filter__category-icon fa-solid fa-caret-down"></i>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <!-- main page -->
+        <div class="mainpage">
+            <div class="grid">
+                <div class="grid__row">
+                    <div class="grid__column-detailmain">
+                        <div class="grid__row grid__row-magin">
+                            <div class="grid__column-detailmain">
+                                <div class="icon-heading">
+                                    <img width="94" height="25" src="https://monngonmoingay.com/wp-content/uploads/2020/10/icon-thangnayangi.png.webp" alt="icon mamn">
+                                </div>
+                                <h3 class="mainpage-text">
+                                    THỰC ĐƠN MÓN NGON MỖI NGÀY
+                                </h3>
+                            </div>
+                        </div>
+                        <!-- main list -->
+                        <div class="grid__row mainpage-list">
+                            
+                        </div>
+                        <!-- paging -->
+                        <div class="paging">
+                            <a href="" class="page-numbers"><<</a>
+                            <span class="page-numbers current">1</span>
+                            <a href="" class="page-numbers" id = "page2">2</a>
+                            <a href="" class="page-numbers" id = "page3">3</a>
+                            <span class="page-numbers dots no-pointer-events">...</span>
+                            <a href="" class="page-numbers">8</a>
+                            <a href="" class="page-numbers">9</a>
+                            <a href="" class="page-numbers">10</a>
+                            <a href="" class="next page-numbers">
+                                Tiếp
+                                <i class="page-numbers-icon fa-solid fa-angle-right"></i>
+                            </a>
+                            <a href="" class="page-numbers">>></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- footer -->
+        <footer class="footer">
+            <div class="grid">
+                <div class="grid__row">
+                    <div class="grid__column-detailmain footer__text">
+                        Copyright © 2021 • Ajinomoto Vietnam • All rights reserved
+                        <a class="footer__link" href="https://www.dmca.com/Protection/Status.aspx?ID=9b5c3473-968a-4049-b577-9dc6d3fda2f5&refurl=https://monngonmoingay.com/tim-kiem-mon-ngon/" target="_blank">
+                            <img width="200" height="40" src="https://images.dmca.com/Badges/dmca-badge-w200-5x1-09.png?ID=9b5c3473-968a-4049-b577-9dc6d3fda2f5" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        const $ = document.querySelector.bind(document)
+        const $$ = document.querySelectorAll.bind(document)        
+
+        const cooking = {
+            cooks: [
+                {
+                    name: 'Mì bò cay xuyên tiêu',
+                    image: 'https://monngonmoingay.com/wp-content/uploads/2023/08/my-bo-cay-xuyen-tieu-500.jpg',
+                    path: '/index.html',
+                    ration: '4 người',
+                    vote: '45',
+                },
+                {
+                    name: 'Bánh crepe nhân mặn',
+                    image: 'https://monngonmoingay.com/wp-content/uploads/2023/08/banh-crepe-nhan-man-500.jpg',
+                    path: '/index.html',
+                    ration: '4 người',
+                    vote: '46',
+                },
+                {
+                    name: 'Khoai chiên lắc mayo mè lá quế',
+                    image: '	https://monngonmoingay.com/wp-content/uploads/2023/08/khoai-chien-lac-mayo-me-500.jpg',
+                    path: '/index.html',
+                    ration: '4 người',
+                    vote: '78',
+                },
+                {
+                    name: 'Matcha flan',
+                    image: 'https://monngonmoingay.com/wp-content/uploads/2023/03/matcha-flan-500.jpg',
+                    path: '/index.html',
+                    ration: '2 người',
+                    vote: '35',
+                },
+                {
+                    name: 'Cánh gà nướng cay',
+                    image: 'https://monngonmoingay.com/wp-content/uploads/2017/11/canh-ga-nuong-cay-500-1.jpg.webp',
+                    path: '/index.html',
+                    ration: '4 người',
+                    vote: '96',
+                },
+                {
+                    name: 'Nem vuông chay',
+                    image: '	https://monngonmoingay.com/wp-content/uploads/2023/02/nem-vuong-chay-500.jpg.webp',
+                    path: '/index.html',
+                    ration: '4 người',
+                    vote: '57',
+                },
+                {
+                    name: 'Salad cam tình yêu',
+                    image: 'https://monngonmoingay.com/wp-content/uploads/2023/02/salad-cam-tinh-yeu-500.jpg',
+                    path: '/index.html',
+                    ration: '4 người',
+                    vote: '35',
+                },
+                {
+                    name: 'Heo kho tàu',
+                    image: 'https://monngonmoingay.com/wp-content/uploads/2023/01/heo-kho-tau-500.jpg',
+                    path: '/index.html',
+                    ration: '4 người',
+                    vote: '45',
+                },
+                {
+                    name: 'Trà sữa kem matcha',
+                    image: 'https://monngonmoingay.com/wp-content/uploads/2022/10/tra-sua-kem-matcha-500.jpg',
+                    path: '/index.html',
+                    ration: '2 người',
+                    vote: '23',
+                },{
+                    name: 'Khổ khoa nhồi nấm kho nước tương',
+                    image: 'https://monngonmoingay.com/wp-content/uploads/2015/08/kho-qua-nhoi-nam-kho-nuoc-tuong-500.jpg',
+                    path: '/index.html',
+                    ration: '4 người',
+                    vote: '244',
+                },{
+                    name: 'Lẩu kim chi chân gà',
+                    image: 'https://monngonmoingay.com/wp-content/uploads/2022/10/lau-kim-chi-chan-ga-500.jpg',
+                    path: '/index.html',
+                    ration: '4 người',
+                    vote: '79',
+                },{
+                    name: 'Sườn chiên xốt mận',
+                    image: 'https://monngonmoingay.com/wp-content/uploads/2015/08/suon-chien-xot-man-500.jpg',
+                    path: '/index.html',
+                    ration: '4 người',
+                    vote: '376',
+                },
+            ],
+            //render
+            render: function(cooksToRender) {
+                console.log(cooksToRender)
+                const htmls = cooksToRender.map(cook => {
+                    return `
+                        <div class="grid__column-3">
+                            <div class="mainpage-item">
+                                <div class="mainpage-item__link">
+                                    <a href="${cook.path}">
+                                        <img class="mainpage-item__img" src="${cook.image}" alt="${cook.name}">
+                                    </a>
+                                </div>
+                                <div class="mainpage-item__info">
+                                    <a href="${cook.path}">
+                                        <h3 class="mainpage-item__info-text">${cook.name}</h3>
+                                    </a>
+                                    <ul>
+                                        <li>
+                                            <span class="mainpage-item__info-icon"> ${cook.ration} </span>
+                                        </li>
+                                        <li>
+                                            <span class="mainpage-item__info-vote"> ${cook.vote} </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    `
+                });
+                $('.mainpage-list').innerHTML = htmls.join('');
+            },
+            start: function() {
+                this.render(this.cooks);
+
+                const searchInput = $('#searchInput');
+                const searchButton = $('#searchButton');
+
+                // Xử lý tìm kiếm khi người dùng ấn Enter
+                searchInput.addEventListener('keyup', event => {
+                    if (event.key === 'Enter') {
+                        this.performSearch();
+                    }
+                });
+
+                // Xử lý tìm kiếm khi người dùng nhấp vào nút tìm kiếm
+                searchButton.addEventListener('click', () => {
+                    this.performSearch();
+                });
+            },
+            performSearch: function() {
+                const searchTerm = $('#searchInput').value.toLowerCase(); // Lấy từ khóa tìm kiếm
+
+                // Lọc danh sách các món ăn dựa trên từ khóa tìm kiếm
+                const searchResults = this.cooks.filter(cook => cook.name.toLowerCase().includes(searchTerm));
+
+                // Hiển thị kết quả tìm kiếm
+                this.render(searchResults);
+                // console.log(searchResults
+            }
+        }
+
+        cooking.start();
+    </script>
+
+</body>
+</html>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+    // Lấy danh sách tất cả các liên kết trang
+    var pageLinks = document.querySelectorAll('.page-numbers');
+
+    // Lặp qua từng liên kết
+    pageLinks.forEach(function (link) {
+        // Gắn sự kiện click cho từng liên kết
+        link.addEventListener('click', function (event) {
+            // Ngăn chặn hành vi mặc định của liên kết (ngăn trình duyệt chuyển hướng)
+            event.preventDefault();
+
+            // Loại bỏ class "current" từ tất cả các liên kết trang
+            pageLinks.forEach(function (pageLink) {
+                pageLink.classList.remove('current');
+            });
+
+            // Thêm class "current" cho liên kết vừa được nhấp chuột
+            link.classList.add('current');
+        });
+    });
+});
+</script>
+

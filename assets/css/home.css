@@ -1,0 +1,414 @@
+.header {
+    height: 78px;
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.header__top {
+    height: 21px;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+.login {
+    font-size: 1.4rem;
+    color: #000;
+    cursor: pointer;
+}
+
+.seperate {
+    font-size: 1.4rem;
+    margin: 0 7px;
+}
+
+.register {
+    font-size: 1.4rem;
+    color: #000;
+    cursor: pointer;
+}
+.register-link {
+    color: var(--text-color);
+    text-decoration: none;
+    text-align: center;
+}
+
+.header__logo {
+    display: flex;
+    width: 186px;
+    align-items: center;
+}
+
+.login:hover {
+    color: #ec2028;
+}
+
+.register-link:hover {
+    color: #ec2028;
+}
+
+.header__logo-link {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    text-decoration: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.header__navbar {
+}
+
+.header__logo-img {
+    width: 100%
+}
+
+.header__navbar-list {
+    width: 100%;
+    padding: 0;
+    list-style-type: none;
+    margin: 10px 0 0 0;
+    display: flex;
+    justify-content: center;
+}
+
+.header__navbar-item {
+    list-style: none;
+    display: inline;
+    text-transform: uppercase;
+    color: #ec2028;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    font-weight: 600;
+    padding: 2px 15px;
+    border-right: 1px #eb232a solid;
+    white-space: nowrap;
+}
+
+.header__navbar-item1 {
+    position: relative;
+    list-style: none;
+    display: inline;
+    text-transform: uppercase;
+    color: #ec2028;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    font-weight: 600;
+    padding: 2px 15px;
+    white-space: nowrap;
+}
+
+.header__navbar-item1:hover .header__navbar-info {
+    display: block;
+}
+
+.header__navbar-item-link {
+    text-decoration: none;
+    color: #ec2028;
+}
+
+.header__navbar-info {
+    position: absolute;
+    width: 250px;
+    right: 15px;
+    top: 20px;
+    padding-top: 5px;
+    background-color: #f2f2f2;
+    z-index: 999;
+    display: none;
+}
+
+.header__navbar-info-list {
+    margin-top: 10px;
+    padding: 0;
+}
+
+.header__navbar-info-item {
+    list-style: none;
+    padding: 4px 15px;
+    height: 34px;
+    display: flex;
+}
+
+
+
+.header__navbar-info-link {
+    width: 100%;
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: #eb232a;
+    padding: 2px 0 2px 15px;
+    border-bottom: 1px #ccc solid;
+    text-align: right;
+}
+
+.header__navbar-info-link1 {
+    width: 100%;
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: #eb232a;
+    padding: 2px 0 2px 15px;
+    text-align: right;
+}
+
+/* search */
+.blocksearch {
+    padding: 20px 15px;
+}
+
+.search__title {
+    margin: 0 0 8px 0;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--while-color);
+}
+
+.search {
+    height: 119px;
+    background: url(https://monngonmoingay.com/wp-content/themes/monngonmoingay/images/bg-slide-home.png.webp) repeat-x -40px top;
+}
+
+.searchbox {
+    position: relative;
+}
+
+.search__input {
+    height: 42px;
+    display: flex;
+    align-items: center;
+    background-color: var(--while-color);
+    border-radius: 2px;
+}
+
+.search__input-text {
+    border: none;
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding-left: 12px;
+    width: 100%;
+    height: 100%;
+    border-radius: 2px;
+    outline: none;
+}
+
+.search__input-text::placeholder {
+    color: #ec2028;
+}
+
+.search__input-btn {
+    width: 60px;
+    height: 34px;
+    border-radius: 2px;
+    border: none;
+    background-color: #ec2028;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 2px;
+    
+}
+
+.search__input-btn-icon {
+    font-size: 1.6rem;
+    color: var(--while-color);
+}
+
+/* filter */
+.filter {
+    background-color: #f0efea;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.filter__category {
+    margin-top: 20px;
+}
+
+.filter__category-list {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    justify-content: center;
+}
+
+.filter__category-item {
+    position: relative;
+    float: left;
+    margin-right: 15px;
+    font-size: 1.4rem;
+    font-weight: 700;
+    padding: 5px;
+    border-bottom: 3px transparent solid;
+}
+
+.filter__category-icon {
+    color: #6c757d;
+}
+
+.filter__category-icon {
+    font-size: 1.25rem;
+}
+
+/* color filter__category-item */
+.nguyenlieu {
+    color: #6161ba;
+}
+
+.cachnau {
+    color: #88c14c;
+}
+
+.diple {
+    color: #cf0000;
+}
+
+.monan {
+    color: #eec219;
+}
+ 
+.giadinh {
+    color: #2797cb;
+}
+
+.vungmien {
+    color: #a66730;
+}
+
+.dinhduong {
+    color: #51bca2;
+}
+.xotnuoccham {
+    color: #ff981e;
+}
+
+/* main page */
+.mainpage {
+    background-color: #f0efea;
+    padding: 24px 0;
+}
+
+.icon-heading {
+    font-size: 1.6rem;
+    margin-bottom: 6px;    
+}
+
+.mainpage-text {
+    margin: 0 0 8px 0;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.8rem;
+    /* font-family: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace; */
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+
+/* main list */
+.mainpage-item {
+    height: auto;
+    margin: 0 0 30px 0;
+    position: relative;
+    background-color: var(--while-color);
+    border-radius: 2px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
+    transition: transform ease-in 0.15s;
+    will-change: transform;
+}
+
+.mainpage-item:hover{
+    box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.05);
+    transform: translateY(-1px);
+}
+
+.mainpage-item__img {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+}
+
+.mainpage-item__info {
+    background-color: var(--while-color);
+    padding: 0 10px 10px 10px;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+.mainpage-item__info a {
+    text-decoration: none;
+    }
+.mainpage-item__info-text {
+    margin: 0 0 8px 0;
+    height: 4.2rem;
+    font-size: 1.8rem;
+    color: #c00;
+    line-height: 2rem;
+    font-weight: 500;
+    display: block;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    text-overflow: ellipsis;    
+}
+
+.mainpage-item__info ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.mainpage-item__info li {
+    padding: 0 5px;
+}
+
+.mainpage-item__info-icon {
+    background: url(https://monngonmoingay.com/wp-content/themes/monngonmoingay/images/icon-pot.png.webp);
+    background-repeat: no-repeat;
+    padding-left: 22px;
+    font-size: 1.4rem;
+    line-height: 1.4;
+    display: flex;
+    align-items: center;
+}
+
+.mainpage-item__info-vote {
+    background: url(https://monngonmoingay.com/wp-content/themes/monngonmoingay/images/icon-vote-small.png.webp);
+    background-repeat: no-repeat;
+    padding-left: 22px;
+    font-size: 1.4rem;
+    line-height: 1.4;
+}
+
+/* paging */
+.paging {
+    margin: 10px 0;
+    text-align: center;
+}
+
+.page-numbers {
+    font-size: 1.7rem;
+    text-decoration: none;
+    padding: 3px 10px;
+    border: 1px solid transparent;
+    color: #444;
+    cursor: pointer;
+}
+
+.page-numbers:hover {
+    color: #eb232a;
+}
+
+.page-numbers-icon {
+    font-size: 1.2rem;
+}
+
+.current {
+    border: 1px solid #eb232a;
+    border-radius: 5px;
+    color: #eb232a;
+    cursor: text;
+}
