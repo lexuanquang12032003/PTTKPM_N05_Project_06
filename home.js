@@ -97,7 +97,7 @@ const cooking = {
 
     start: function() {
         // Fetch the data from the JSON file
-        fetch('cooks.json')
+        fetch('datas/cooks.json')
             .then(response => response.json())
             .then(data => {
                 this.cooks = data; // Set the cooks array with the data

@@ -172,3 +172,86 @@
 .fouvourite-storage-icon {
     margin-left: 4px;
 }
+
+/* spice */
+.spice {
+    padding: 48px 0;
+    background: #f0efea;
+}
+
+.spice-box {
+    padding-bottom: 15px;
+    margin-bottom: 24px;
+    background-color: var(--while-color);
+    box-shadow: 0 0 5px 0 #e3e3e3;
+}
+
+.spice-box__img {
+    padding: 20px 40px 10px 40px;
+    text-align: center;
+}
+
+.spice-box__img img {
+    width: 100%;
+}
+
+.spice-box__center {
+    text-align: center;
+}
+
+.spice-box__center-line {
+    border-top: 2px #eb232a solid;
+    padding: 0 10px;
+}
+
+.spice-box__title {
+    text-align: center;
+    font-weight: 500;
+    /* font-family: 'Nunito Sans',sans-serif; */
+}
+
+.spice-box__title a {
+    color: #eb232a;
+}
+
+.spice-box__btn {
+    display: flex;
+}
+
+.spice-box__btn-muangay {
+    color: var(--while-color);
+    background: #eb232a;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 10px;
+    text-align: center;
+}
+
+.spice-box__btn-muangay:hover {
+    background-color: #FF262E;
+}
+
+.spice-box__btn-congthuc {
+    color: #eb232a;
+    background: #fff;
+    border: 1px solid #eb232a;
+    border-radius: 5px;
+    padding: 2px 10px;
+    font-size: 10px;
+    text-align: center;
+}
+
+.spice-box__btn-xemthem {
+    font-size: 8px;
+    font-family: 'Nunito Sans',sans-serif;
+}
+
+.spice-box_padding1 {
+    padding-left: 10px;
+    padding-right: 4px;
+}
+
+.spice-box_padding2 {
+    padding-left: 4px;
+    padding-right: 10px;
+}
