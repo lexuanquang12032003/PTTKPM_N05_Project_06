@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ăn là thích </title>
+    <title>Ăn là thích</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="./assets/css/base.css">
-    <link rel="stylesheet" href="./assets/css/home.css">
+    <link rel="stylesheet" href="./assets/css/main.css"> 
+    <link rel="stylesheet" href="./assets/css/home.css"> 
     <link rel="stylesheet" href="./assets//fonts/fontawesome-free-6.4.0-web/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
@@ -56,7 +57,7 @@
                                     </a>
                                 </li>
                                 <li class="header__navbar-item header__navbar-item-4">
-                                    <a href="./favourite.html" class="header__navbar-item-link">
+                                    <a href="" class="header__navbar-item-link">
                                         Công Thức Yêu Thích
                                     </a>
                                     <!-- <div class="header__navbar-info">
@@ -111,43 +112,29 @@
                 </div>
             </div>
         </div>
-        
-        <!-- main page -->
-        <div class="mainpage">
+        <!-- slide favourite -->
+        <div class="favourite">
             <div class="grid">
                 <div class="grid__row">
                     <div class="grid__column-detailmain">
                         <div class="grid__row grid__row-magin">
                             <div class="grid__column-detailmain">
-                                <div class="icon-heading">
-                                    <img width="94" height="25" src="https://monngonmoingay.com/wp-content/uploads/2020/10/icon-thangnayangi.png.webp" alt="icon mamn">
+                                <div class="favourite-heading-img">
+                                    <img width="94" height="25" src="	https://monngonmoingay.com/wp-content/uploads/2020/10/icon-kh-congthuc.png.webp" alt="">
                                 </div>
-                                <h3 class="mainpage-text">
-                                    THỰC ĐƠN MÓN NGON MỖI NGÀY
-                                </h3>
+                                <div class="favourite-heading-tittle">
+                                    <h1>CÔNG THỨC YÊU THÍCH</h1>
+                                    Lưu lại công thức yêu thích một cách dễ dàng, khi cần ý tưởng là bạn có ngay
+                                </div>
+                                <div class="fouvourite-storage">
+                                    Công thức đã lưu
+                                    <i class="fouvourite-storage-icon fa-regular fa-heart"></i>
+                                </div>
+                                <!-- favourite -->
+                                
                             </div>
                         </div>
-                        <!-- main list -->
-                        <div class="grid__row mainpage-list">
-                            
-                        </div>
-                        <!-- paging -->
-                        <div class="paging">
-                            <!-- <a href="" class="page-numbers"><<</a> -->
-                            <a class="page-numbers current" id = "page1">1</a>
-                            <a href="" class="page-numbers" id = "page2">2</a>
-                            <a href="" class="page-numbers" id = "page3">3</a>
-                            <!-- <span class="page-numbers dots no-pointer-events">...</span> -->
-                            <!-- <a href="" class="page-numbers">8</a> -->
-                            <!-- <a href="" class="page-numbers">9</a> -->
-                            <!-- <a href="" class="page-numbers">10</a> -->
-                            <!-- <a href="" class="next page-numbers"> -->
-                                <!-- Tiếp -->
-                                <!-- <i class="page-numbers-icon fa-solid fa-angle-right"></i> -->
-                            <!-- </a> -->
-                            <!-- <a href="" class="page-numbers">>></a> -->
-                        </div>
-                    </div>
+                    </div>                
                 </div>
             </div>
         </div>
@@ -163,11 +150,82 @@
                     </div>
                 </div>
             </div>
-        </footer>
+        </footer>      
     </div>
-    <script src="main.js"></script>
+    <script>
+        const favourites = [];
+        const h1Text = document.querySelector("h1").textContent.trim();
+    
+        // Hàm để hiển thị danh sách món ăn yêu thích
+        function displayFavorites() {
+            const htmls = favourites.map(cook => `
+                <div class="grid__column-3">
+                    <div class="mainpage-item">
+                        <div class="mainpage-item__link">
+                            <a href="${cook.path}">
+                                <img class="mainpage-item__img" src="${cook.image}" alt="${cook.name}">
+                            </a>
+                        </div>
+                        <div class="mainpage-item__info">
+                            <a href="${cook.path}">
+                                <h3 class="mainpage-item__info-text">${cook.name}</h3>
+                            </a>
+                            <ul>
+                                <li>
+                                    <span class="mainpage-item__info-icon">${cook.ration}</span>
+                                </li>
+                                <li>
+                                    <span class="mainpage-item__info-vote">${cook.vote}</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            `);
+    
+            // Thêm chuỗi HTML vào div có class "favourite-list"
+            document.querySelector('.favourite-list').innerHTML = htmls.join('');
+        }
+    
+        // Fetch the data from the JSON file
+        fetch('cooks.json')
+            .then(response => response.json())
+            .then(data => {
+                // Set the cooks array with the data
+                this.cooks = data;
+                // Render the data
+                displayFavorites();
+    
+                // Tìm món ăn có tên trùng với thẻ h1 và thêm vào danh sách favorites
+                const matchingMenu = this.cooks.find(item => item.name === h1Text);
+    
+                if (matchingMenu) {
+                    // Bổ sung xử lý khi người dùng nhấp vào "yêu thích"
+                    const favoriteButton = document.querySelector(".detail__note-text");
+    
+                    favoriteButton.addEventListener("click", function() {
+                        // Kiểm tra xem món ăn đã có trong danh sách yêu thích chưa
+                        const isFavorite = favourites.some(item => item.name === matchingMenu.name);
+    
+                        if (!isFavorite) {
+                            // Nếu chưa có, thêm món ăn vào danh sách yêu thích
+                            favourites.push(matchingMenu);
+                            alert("Món ăn đã được thêm vào danh sách yêu thích!");
+                        } else {
+                            // Nếu đã có, thông báo rằng món ăn đã tồn tại trong danh sách yêu thích
+                            alert("Món ăn đã tồn tại trong danh sách yêu thích!");
+                        }
+    
+                        // Sau khi thêm món ăn vào danh sách yêu thích, hiển thị lại danh sách yêu thích
+                        displayFavorites();
+                    });
+                }
+            })
+            .catch(error => {
+                console.error('Error fetching data:', error);
+            });
+    </script>
+    
+    
 </body>
 </html>
-
-
-
