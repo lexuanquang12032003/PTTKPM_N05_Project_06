@@ -30,6 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+
 const cooking = {
     cooks: [],
     currentPage: 1, // Trang hiện tại
@@ -135,6 +136,7 @@ const cooking = {
     },
 
     // favourite
+    
     
 }
 cooking.start();

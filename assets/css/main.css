@@ -79,14 +79,18 @@
 .detail__note-icon {
     color: #eb232a;
     font-size: 3rem;
+    border-radius: 100px; 
+    cursor: pointer;
 }
 
 .detail__note-icon:hover {
-    background-color: rgba(235, 35, 42, 0.3);
-    border-radius: 100px;
+    background-color: rgba(235, 35, 42, 0.1);
 }
-.detail__note-icon:focus {
-    background-color: rgba(235, 35, 42, 0.3);
+
+.detail__note-icon.active {
+    /* background-color: rgba(235, 35, 42, 0.4);  */
+    color: white;
+    background-color: #eb232a;
 }
 
 /* description */
@@ -167,6 +171,7 @@
     justify-content: center;
     border-radius: 50px;
     color: var(--while-color);
+    margin-bottom: 24px;
 }
 
 .fouvourite-storage-icon {
@@ -254,4 +259,77 @@
 .spice-box_padding2 {
     padding-left: 4px;
     padding-right: 10px;
+}
+
+/* spice detail */
+.spice-detail {
+    margin: 48px 0 24px 0;
+}
+
+.spice-detail-box {
+    padding: 16px;
+    border: 1px solid #DEE2E6;
+    text-align: center;
+}
+
+.spice-detail-box__img {
+
+}
+
+.spice-detail-box__center {
+    margin-top: 16px;
+}
+
+.spice-detail-box__font {
+    font-weight: 600;
+}
+
+.spice-detial-box__btn {
+
+}
+
+.btn-shop img {
+    box-shadow: 0 0 5px 0 #e3e3e3;
+}
+
+.spice-detail__name {
+    top: 0;
+}
+.spice-detail__name h1 {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    padding: 0;
+    margin: 0 0 8px 0;
+}
+
+.spice-detail__content{
+    font-size: 16px;
+    font-family: 500;
+}
+
+.spice-detail__font {
+    font-size: 18px;
+    min-height: 30px;
+    color: #dc3545;
+    border-bottom: 1px solid #dee2e6;
+    margin-bottom: 8px;
+}
+
+.spice-detail__info {
+
+}
+
+.spice-detail__info-item {
+    border-bottom: 1px solid #dee2e6;
+    margin-bottom: 8px;
+}
+
+.info-item__title {
+    font-family: 500;
+    color: #6C757D;
+}
+
+.info-item__text {
+    font-family: 500;
 }

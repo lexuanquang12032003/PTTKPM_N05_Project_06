@@ -100,10 +100,22 @@ h3 {
     width: 33.33333%;
 }
 
+.grid__column-5 {
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 41.66667%;
+}
+
 .grid__column-6 {
     /* padding-left: 10px;
     padding-right: 10px; */
     width: 50%;
+}
+
+.grid__column-7 {
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 58.33333%;
 }
 
 .grid__column-8 {

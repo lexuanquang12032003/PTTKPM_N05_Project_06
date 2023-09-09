@@ -117,7 +117,7 @@
             <div class="grid-60">
                 <div class="grid__row">
                     <div class="grid__column-detailmain">
-                        <h1>Bánh rán trứng phô mai</h1>
+                        <h1 class="banhRanTrungPhoMai">Bánh rán trứng phô mai</h1>
                         <div class="detail_img">
                             <div class="video">
                                 <!-- <div class="video__youtube" data-enbed="WkIoeZ-zECI" data-img="https://monngonmoingay.com/wp-content/uploads/2023/08/khoai-chien-lac-mayo-me.jpg"></div> -->
@@ -143,7 +143,7 @@
                                 Khẩu phần
                             </li>
                             <li class="detail__note-item">
-                                <span class="detail__note-text detail__note-icon">
+                                <span class="detail__note-text detail__note-icon" id="iconBanhRanTrungPhoMai">
                                     <i class="fa-regular fa-heart"></i>
                                 </span>
                                 Yêu thích
@@ -288,6 +288,127 @@
             </div>
         </footer>      
     </div>
-    <script src="main.js"></script>
 </body>
 </html>
+
+<script>
+    const favoriteIcon = document.getElementById("iconBanhRanTrungPhoMai");
+    let iconBanhRanTrungPhoMai = false;
+    let favoriteCooks = JSON.parse(localStorage.getItem('favoriteCooks')) || [];
+
+    // Kiểm tra trạng thái "Yêu thích" từ Local Storage khi trang web được tải
+    const storedFavoriteState = localStorage.getItem('iconBanhRanTrungPhoMai');
+    if (storedFavoriteState !== null) {
+        iconBanhRanTrungPhoMai = storedFavoriteState === 'true';
+        updateFavoriteIcon();
+    }
+
+    favoriteIcon.addEventListener("click", function () {
+        iconBanhRanTrungPhoMai = !iconBanhRanTrungPhoMai; // Chuyển đổi trạng thái "Yêu thích"
+        updateFavoriteIcon();
+
+        // Lưu trạng thái "Yêu thích" vào Local Storage
+        localStorage.setItem('iconBanhRanTrungPhoMai', iconBanhRanTrungPhoMai.toString());
+    });
+
+    favoriteIcon.addEventListener("mouseover", function () {
+        favoriteIcon.classList.add("hover");
+    });
+
+    favoriteIcon.addEventListener("mouseout", function () {
+        favoriteIcon.classList.remove("hover");
+    });
+
+    function updateFavoriteIcon() {
+        const h1Element = document.querySelector('.banhRanTrungPhoMai');
+        const searchedCookName = h1Element.textContent.trim();
+        console.log(localStorage);
+        if (iconBanhRanTrungPhoMai) {
+            favoriteIcon.classList.add("active"); // Thêm lớp "active" để thay đổi màu nền khi bật
+            fetch('datas/cooks.json')
+                .then(response => response.json())
+                .then(cooks => {
+                    console.log(cooks.name);
+                    // Tìm kiếm món ăn có tên trùng với searchedCookName
+                    const foundCook = cooks.find(cook => cook.name === searchedCookName);
+                    if (foundCook) {
+                        // Thêm món ăn vào mảng favoriteCooks nếu chưa tồn tại
+                        if (!favoriteCooks.some(cook => cook.name === foundCook.name)) {
+                            favoriteCooks.push(foundCook);
+                            // Lưu mảng favoriteCooks vào Local Storage
+                            localStorage.setItem('favoriteCooks', JSON.stringify(favoriteCooks));
+                        }
+                    }
+                });
+        } else {
+            favoriteIcon.classList.remove("active"); // Xóa lớp "active" để trở lại màu nền ban đầu khi tắt
+            // Xóa thông tin món ăn khỏi mảng favoriteCooks nếu tồn tại
+            const foundIndex = favoriteCooks.findIndex(cook => cook.name === searchedCookName);
+            if (foundIndex !== -1) {
+                favoriteCooks.splice(foundIndex, 1);
+                // Lưu mảng favoriteCooks vào Local Storage
+                localStorage.setItem('favoriteCooks', JSON.stringify(favoriteCooks));
+            }
+        }
+    }
+    localStorage.removeItem('isFavorite');
+</script>
+
+
+
+<!-- <script src="home.js"></script>  -->
+
+
+<!-- <script>
+    const favoriteIcon = document.getElementById("favoriteIcon");
+    let isFavorite = false;
+
+    // Kiểm tra trạng thái "Yêu thích" từ Local Storage khi trang web được tải
+    const storedFavoriteState = localStorage.getItem('isFavorite');
+    if (storedFavoriteState !== null) {
+        isFavorite = storedFavoriteState === 'true';
+        updateFavoriteIcon();
+    }
+
+    favoriteIcon.addEventListener("click", function () {
+        isFavorite = !isFavorite; // Chuyển đổi trạng thái "Yêu thích"
+        updateFavoriteIcon();
+
+        // Lưu trạng thái "Yêu thích" vào Local Storage
+        localStorage.setItem('isFavorite', isFavorite.toString());
+    });
+
+    favoriteIcon.addEventListener("mouseover", function () {
+        favoriteIcon.classList.add("hover");
+    });
+
+    favoriteIcon.addEventListener("mouseout", function () {
+        favoriteIcon.classList.remove("hover");
+    });
+
+    function updateFavoriteIcon() {
+        const h1Element = document.querySelector('.cook-name');
+        const searchedCookName = h1Element.textContent.trim();
+        console.log(searchedCookName);
+        if (isFavorite) {
+            favoriteIcon.classList.add("active"); // Thêm lớp "active" để thay đổi màu nền khi bật
+            fetch('datas/cooks.json')
+                .then(response => response.json())
+                .then(cooks => {
+                    console.log(cooks.name);
+                    // Tìm kiếm món ăn có tên trùng với searchedCookName
+                    const foundCook = cooks.find(cook => cook.name === searchedCookName);
+                    favourites.push(foundCook);
+                })
+        } else {
+            favoriteIcon.classList.remove("active"); // Xóa lớp "active" để trở lại màu nền ban đầu khi tắt
+            fetch('datas/favourites.json')
+                .then(response => response.json())
+                .then(favourites => {
+                    // Tìm kiếm món ăn có tên trùng với searchedCookName
+                    const foundCookIndex = favourites.findIndex(favourite => favourite.name === searchedCookName);
+                    favourites.remove(foundCookIndex);
+                })
+        }
+    }
+</script> -->

@@ -26,13 +26,13 @@
     position: relative;
     background-color: var(--while-color);
     border-radius: 2px;
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
     transition: transform ease-in 0.15s;
     will-change: transform;
 }
 
 .mainpage-item:hover{
-    box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.15);
     transform: translateY(-1px);
 }
 
