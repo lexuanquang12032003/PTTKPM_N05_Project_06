@@ -101,8 +101,8 @@
                         </div>
                         <div class="searchbox">
                             <div class="search__input">
-                                <input type="text" id="searchInput" class="search__input-text" placeholder="Nhập tại đây..." class="placeholder-color">
-                                <button id="searchButton" class="search__input-btn">
+                                <input type="text" id="searchInputFavorite" class="search__input-text" placeholder="Nhập tại đây..." class="placeholder-color">
+                                <button id="searchButtonFavorite" class="search__input-btn">
                                     <i class="search__input-btn-icon fa-solid fa-magnifying-glass"></i>
                                 </button>
                             </div>
@@ -158,16 +158,15 @@
 </html>
 
 <script>
-const $ = document.querySelector.bind(document);
-const $$ = document.querySelectorAll.bind(document);
-
-const app = {
-    render: function () {
-        const favoriteCooks = JSON.parse(localStorage.getItem('favoriteCooks'));
-
-        if (favoriteCooks && favoriteCooks.length > 0) {
+    const $ = document.querySelector.bind(document);
+    const $$ = document.querySelectorAll.bind(document);
+    
+    const app = {
+        favoriteCooks: [], // Thêm thuộc tính favoriteCooks để lưu trữ danh sách món ăn yêu thích
+    
+        render: function (cooksToRender) {
             // Hiển thị danh sách các món ăn yêu thích
-            const htmls = favoriteCooks.map(cook => {
+            const htmls = cooksToRender.map(cook => {
                 return `
                     <div class="grid__column-3">
                         <div class="mainpage-item">
@@ -193,19 +192,53 @@ const app = {
                     </div>
                 `;
             });
-
-            $('.favourite-list').innerHTML = htmls.join('');
-        }
-    },
-    start: function () {
-        this.render();
-    }
-};
-
-app.start();
-console.log(localStorage);
-
-</script>
+    
+            const favoriteList = $('.favourite-list');
+            if (favoriteList) {
+                favoriteList.innerHTML = htmls.join('');
+            }
+        },
+    
+        start: function () {
+            // Lấy danh sách món ăn yêu thích từ Local Storage
+            const favoriteCooks = JSON.parse(localStorage.getItem('favoriteCooks'));
+            this.favoriteCooks = favoriteCooks || []; // Nếu không có danh sách, gán một mảng trống
+    
+            const searchInput = $('#searchInputFavorite');
+            const searchButton = $('#searchButtonFavorite');
+    
+            // Xử lý tìm kiếm khi người dùng ấn Enter
+            searchInput.addEventListener('keyup', event => {
+                if (event.key === 'Enter') {
+                    this.performSearch();
+                }
+            });
+    
+            // Xử lý tìm kiếm khi người dùng nhấp vào nút tìm kiếm
+            searchButton.addEventListener('click', () => {
+                this.performSearch();
+            });
+    
+            // Hiển thị danh sách món ăn yêu thích ban đầu
+            this.render(this.favoriteCooks);
+        },
+    
+        performSearch: function () {
+            const searchTerm = $('#searchInputFavorite').value.toLowerCase(); // Lấy từ khóa tìm kiếm
+    
+            // Lọc danh sách các món ăn dựa trên từ khóa tìm kiếm
+            const searchResults = this.favoriteCooks.filter(favoriteCook => favoriteCook.name.toLowerCase().includes(searchTerm));
+    
+            // Hiển thị kết quả tìm kiếm
+            this.render(searchResults);
+        },
+    };
+    
+    app.start();
+    console.log(localStorage);
+    </script>
+    
+    
 
 <!-- 
     <script>
@@ -254,7 +287,7 @@ const app = {
 };
 
 app.start();
-
+console.log(localStorage);
 
 </script>
  -->

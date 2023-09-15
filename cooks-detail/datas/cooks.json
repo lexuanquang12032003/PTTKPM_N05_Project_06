@@ -30,7 +30,7 @@
     {
         "name": "Canh nấm hạt sen",
         "image": "https://monngonmoingay.com/wp-content/uploads/2015/08/canh-nam-hat-sen-500.jpg.webp",
-        "path": "/cooks-detail/canh-nam-hat-sen",
+        "path": "/cooks-detail/canh-nam-hat-sen.html",
         "ration": "4 người",
         "vote": "138"
     },
@@ -52,7 +52,7 @@
         "name": "Smoothies trà sữa dâu",
         "image": "https://monngonmoingay.com/wp-content/uploads/2021/11/Smoothies-tra-sua-dau-500.jpg",
         "path": "/cooks-detail/smoothies-tra-sua-dau.html",
-        "ration": "4 người",
+        "ration": "2 người",
         "vote": "35"
     },
     {
@@ -63,9 +63,9 @@
         "vote": "45"
     },
     {
-        "name": "Khổ khoa nhồi nấm kho nước tương",
+        "name": "Khổ qua nhồi nấm kho nước tương",
         "image": "https://monngonmoingay.com/wp-content/uploads/2015/08/kho-qua-nhoi-nam-kho-nuoc-tuong-500.jpg",
-        "path": "/cooks-detail/kho-khoa-nhoi-nam-kho-nuoc-tuong.html",
+        "path": "/cooks-detail/kho-qua-nhoi-nam-kho-nuoc-tuong.html",
         "ration": "4 người",
         "vote": "244"
     },

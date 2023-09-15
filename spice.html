@@ -197,7 +197,7 @@
             $('.spice-list').innerHTML = htmls.join('');
         },
         fetchData: function() {
-            fetch('datas/spices.json') // Đường dẫn tới tệp JSON trong thư mục 'datas'
+            fetch('cooks-detail/datas/spices.json') // Đường dẫn tới tệp JSON trong thư mục 'datas'
                 .then(response => response.json())
                 .then(data => {
                     this.spices = data;
