@@ -42,17 +42,17 @@
                         <nav class="header__navbar">
                             <ul class="header__navbar-list">
                                 <li class="header__navbar-item">
-                                    <a href="./home.html" class="header__navbar-item-link">
+                                    <a href="/home.html" class="header__navbar-item-link">
                                         Danh Mục Thực Đơn
                                     </a>
                                 </li>
                                 <li class="header__navbar-item">
-                                    <a href="home.html" class="header__navbar-item-link">
+                                    <a href="/home.html" class="header__navbar-item-link">
                                         Kế Hoạch Nấu Ăn
                                     </a>
                                 </li>
                                 <li class="header__navbar-item">
-                                    <a href="#" class="header__navbar-item-link">
+                                    <a href="/spice.html" class="header__navbar-item-link">
                                         Gia Vị Bạn Cần
                                     </a>
                                 </li>
@@ -125,23 +125,23 @@
                             <p class="spice-detail-box__font">Bạn có thể mua hàng tại gian hàng trên:</p>
                             <div class="spice-detial-box__btn">
                                 <span class="btn-shop">
-                                    <a href=""><img src="https://monngonmoingay.com/wp-content/themes/monngonmoingay/images/btn-shop-tiki.png.webp" alt=""> </a>
+                                    <a href="https://tiki.vn/cua-hang/ajinomoto-official-store" target="_blank"><img src="https://monngonmoingay.com/wp-content/themes/monngonmoingay/images/btn-shop-tiki.png.webp" alt=""> </a>
                                 </span>
                                 <span class="btn-shop">
-                                    <a href=""><img src="https://monngonmoingay.com/wp-content/themes/monngonmoingay/images/btn-shop-lazada.png.webp" alt=""></a>
+                                    <a href="https://www.lazada.vn/shop/ajinomoto-official-store" target="_blank"><img src="https://monngonmoingay.com/wp-content/themes/monngonmoingay/images/btn-shop-lazada.png.webp" alt=""></a>
                                 </span>
                                 <span class="btn-shop">
-                                    <a href=""><img src="https://monngonmoingay.com/wp-content/themes/monngonmoingay/images/btn-shopee.png.webp" alt=""></a>
+                                    <a href="https://shopee.vn/ajinomoto_official_store" target="_blank"><img src="https://monngonmoingay.com/wp-content/themes/monngonmoingay/images/btn-shopee.png.webp" alt=""></a>
                                 </span>
                                 <span class="btn-shop">
-                                    <a href=""><img src="https://monngonmoingay.com/wp-content/themes/monngonmoingay/images/btn-shop-sendo.jpg" alt=""></a>
+                                    <a href="https://www.sendo.vn/shop/ajinomoto-chinh-hang" target="_blank"><img src="https://monngonmoingay.com/wp-content/themes/monngonmoingay/images/btn-shop-sendo.jpg" alt=""></a>
                                 </span>
                             </div>
                         </div>
                     </div>
                     <div class="grid__column-7">
                         <div class="spice-detail__name">
-                            <h1>BỘT NGỌT AJI-NO-MOTO®</h1>
+                            <h1 class="relation-name">BỘT NGỌT AJI-NO-MOTO®</h1>
                         </div>
                         <div class="spice-detail__content">
                             <p>
@@ -212,6 +212,41 @@
                     </div>
                 </div>
             </div>
+            <div class="grid">
+                <div class="grid__row">
+                    <div class="relation-heading">
+                        <div class="relation-heading__icon">
+                            <img width="94" height="25" src="https://monngonmoingay.com/wp-content/uploads/2020/10/icon-homnayangi.png.webp" alt="">
+                        </div>
+                        <h5 class="relation-heading__title">MÓN NGON VỚI BỘT NGỌT AJI-NO-MOTO®</h5>
+                    </div>
+                </div>
+                <!--  -->
+                <div class="grid__row relation">
+                    <!-- <div class="grid__column-3">
+                        <div class="mainpage-item">
+                            <div class="mainpage-item__link">
+                                <a href="/cooks-detail/cot-let-chien-sa-ot.html">
+                                    <img class="mainpage-item__img" src="https://monngonmoingay.com/wp-content/uploads/2021/11/cot-let-chien-sa-ot-500.jpg" alt="${cook.name}">
+                                </a>
+                            </div>
+                            <div class="mainpage-item__info">
+                                <a href="/cooks-detail/cot-let-chien-sa-ot.html">
+                                    <h3 class="mainpage-item__info-text">Cốt lết chiên sả ớt</h3>
+                                </a>
+                                <ul>
+                                    <li>
+                                        <span class="mainpage-item__info-icon"> 4 người </span>
+                                    </li>
+                                    <li>
+                                        <span class="mainpage-item__info-vote"> 66 </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
         </div>
         <!-- footer -->
         <footer class="footer">
@@ -229,3 +264,77 @@
     </div>
 </body>
 </html>
+
+<script>
+const $ = document.querySelector.bind(document);
+    const $$ = document.querySelectorAll.bind(document);
+    const app = {
+        relation: [],
+
+        render: function (cooksToRender) {
+            // Hiển thị danh sách các món ăn yêu thích
+            const htmls = cooksToRender.map(cook => {
+                return `
+                    <div class="grid__column-3">
+                        <div class="mainpage-item">
+                            <div class="mainpage-item__link">
+                                <a href="${cook.path}">
+                                    <img class="mainpage-item__img" src="${cook.image}" alt="${cook.name}">
+                                </a>
+                            </div>
+                            <div class="mainpage-item__info">
+                                <a href="${cook.path}">
+                                    <h3 class="mainpage-item__info-text">${cook.name}</h3>
+                                </a>
+                                <ul>
+                                    <li>
+                                        <span class="mainpage-item__info-icon"> ${cook.ration} </span>
+                                    </li>
+                                    <li>
+                                        <span class="mainpage-item__info-vote"> ${cook.vote} </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+            const relationList = $('.relation');
+            if (relationList) {
+                relationList.innerHTML = htmls.join('');
+            }
+        },
+        start: function() {
+            const spiceTitle = document.querySelector(".relation-name").textContent.trim(); // Lấy nội dung của tiêu đề
+
+            // Fetch the data from the JSON file
+            fetch('datas/cooks.json')
+                .then(response => response.json())
+                .then(data => {
+                    const filteredCooks = data.filter(cook => {
+                        // Duyệt qua danh sách spices của mỗi món ăn
+                        for (let i = 0; i < cook.spices.length; i++) {
+                            console.log(cook.spices[i]);
+                            console.log("  ");
+                            if (cook.spices[i] === spiceTitle) {
+                                return cook; // Nếu có spiceTitle trong danh sách, trả về true
+                            }
+                        }
+                    });
+                    console.log(filteredCooks);
+                    this.relation = filteredCooks;
+                    this.render(this.relation); // Hiển thị danh sách món ăn sau khi lọc
+                })
+                .catch(error => {
+                    console.error('Error fetching data:', error);
+                });
+        }
+    }
+
+    // Gọi hàm start() để bắt đầu ứng dụng
+    app.start();
+
+</script>
+
+
+

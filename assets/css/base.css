@@ -50,8 +50,7 @@ h3 {
 }
 
 .grid {
-    width: 1140px;
-    max-width: 100%;
+    width: 100%;
     padding: 0 15px;
     margin: 0 auto;
 }
@@ -89,8 +88,8 @@ h3 {
 }
 
 .grid__column-3 {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 7px;
+    padding-right: 7px;
     width: 25%;
 }
 
@@ -139,9 +138,10 @@ h3 {
 
 .grid-60 {
     width: 60%;
-    padding: 0 15px;
+    /* padding: 0 15px; */
     margin: 0 auto;
 }
+
 
 /* navbar */
 .header {
@@ -208,7 +208,10 @@ h3 {
 }
 
 .header__logo-img {
-    width: 100%
+    width: 100%;
+    height: auto;
+    vertical-align: middle;
+    border-style: none;
 }
 
 .header__navbar-list {
@@ -326,7 +329,7 @@ h3 {
 }
 
 .search {
-    height: 119px;
+    /* height: 119px; */
     background: url(https://monngonmoingay.com/wp-content/themes/monngonmoingay/images/bg-slide-home.png.webp) repeat-x -40px top;
 }
 
@@ -424,5 +427,92 @@ h3 {
     }
     to {
         transform: scale(var(--growth-to));
+    }
+}
+
+
+/* media */
+  @media only screen and (min-width: 576px) {
+    .grid {
+        max-width: 540px;
+    }
+  }
+  @media only screen and (min-width: 768px) {
+    .grid {
+        max-width: 720px;
+    }
+  }
+  @media only screen and (min-width: 992px) {
+    .grid {
+        max-width: 960px;
+    }
+    .grid-60 {
+        /* width: 100%; */
+    }
+
+  }
+@media only screen and (min-width: 1200px) {
+    .grid {
+        max-width: 1140px;
+    }
+  }
+
+
+/*  */
+@media only screen and (max-width: 576px) {
+    .grid__column-8 {
+        width: 100%;
+    }
+    .spice, .mainpage, .spice-detail .grid__row {
+        flex-direction: column;
+    }
+    .spice .grid__column-9 {
+        width: 100%;
+    }
+    .spice-detail .grid__column-5 {
+        width: 100%;
+    }
+    .spice-detail .grid__column-7 {
+        width: 100%;
+    }
+    .spice-detail .info-item__title {
+        padding: 0;
+    }
+
+    .grid__column-3 {
+        width: 100%;
+        padding: 0 15px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .grid-60 {
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+    .header__navbar-list {
+        display: none;
+    }
+    .header .grid__column-1 {
+        width: 20%;
+    }
+    .header .grid__column-9 {
+        width: 40%;
+    }
+}
+@media only screen and (max-width: 992px) {
+    .grid-60 {
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+}
+
+/*  */
+@media only screen and (min-width: 576px) and (max-width: 768px) {
+    .mainpage-item__info ul {
+        flex-direction: column;
+        align-items: flex-start !important;
     }
 }
