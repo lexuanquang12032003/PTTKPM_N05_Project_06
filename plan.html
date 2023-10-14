@@ -97,6 +97,12 @@
                                 <h4 class="search__title">Tìm kiếm công thức, nguyên liệu, cách nấu, dịp nấu,...</h4>
                             </div>
                             <div class="grid__column-3">
+                                <!-- <a class="plan-heading__share__icon" target="_blank" href="https://www.facebook.com/monngonmoingay.ajinomoto">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </a> 
+                                <a class="plan-heading__share__icon" target="_blank" href="https://www.youtube.com/channel/UC-2EWHDbHnx5JOeyWfLdIxQ">
+                                    <i class="fa-brands fa-youtube"></i>
+                                </a>  -->
                             </div>
                         </div>
                         <div class="searchbox">
@@ -108,7 +114,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="grid__column-2"></div>
+                    <div class="grid__column-2">
+                        <!-- <i class="fa-solid fa-bell"></i> -->
+                    </div>
                 </div>
             </div>
         </div>
@@ -126,13 +134,13 @@
                         <div class="plan-heading__text">
                             <div class="plan-heading__share">
                                 Chia sẻ:
-                                <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://monngonmoingay.com/mon-ngon-goi-y/?start=18/09/2023&end=24/09/2023">
+                                <a class="plan-heading__share__icon" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://monngonmoingay.com/mon-ngon-goi-y/?start=18/09/2023&end=24/09/2023">
                                     <i class="fa-brands fa-facebook-f"></i>
                                 </a> 
-                                <a target="_blank" href="https://workspaceupdates.googleblog.com/2023/04/new-community-features-for-google-chat-and-an-update-currents%20.html">
+                                <a class="plan-heading__share__icon" target="_blank" href="https://workspaceupdates.googleblog.com/2023/04/new-community-features-for-google-chat-and-an-update-currents%20.html">
                                     <i class="fa-brands fa-google-plus-g"></i>
                                 </a>
-                                <a target="_blank" href="https://twitter.com/home?status=http://monngonmoingay.com/mon-ngon-goi-y/?start=18/09/2023&end=24/09/2023">
+                                <a class="plan-heading__share__icon" target="_blank" href="https://twitter.com/home?status=http://monngonmoingay.com/mon-ngon-goi-y/?start=18/09/2023&end=24/09/2023">
                                     <i class="fa-brands fa-twitter"></i>
                                 </a>
                             </div>
@@ -518,3 +526,28 @@
         </footer>
     </div>
 </body>
+</html>
+
+<script>
+    var searchInput = document.getElementById('searchInput');
+var searchBtn = document.getElementById('searchButton');
+
+searchInput.addEventListener('keyup', event => {
+    var inputValue = searchInput.value; // Lấy giá trị input tại thời điểm sự kiện keyup
+    if (event.key === 'Enter' && inputValue !== "") {
+        var encodedValue = encodeURIComponent(inputValue);
+        window.location.href = '/home.html?search=' + encodedValue;
+    }
+});
+
+searchBtn.addEventListener('click', function(event) {
+    var inputValue = searchInput.value; // Lấy giá trị input tại thời điểm nhấn nút tìm kiếm
+    if (inputValue !== "") {
+        var encodedValue = encodeURIComponent(inputValue);
+        window.location.href = '/home.html?search=' + encodedValue;
+    }
+});
+
+</script>
+
+

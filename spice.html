@@ -455,6 +455,17 @@ document.addEventListener('DOMContentLoaded', function () {
             searchButton.addEventListener('click', () => {
                 this.performSearch();
             });
+
+            window.onload = function() {
+                // Lấy giá trị từ URL
+                var urlParams = new URLSearchParams(window.location.search);
+                var inputValue = urlParams.get('search');
+                console.log(inputValue);
+                if (inputValue) {
+                    const searchResults = app.spices.filter(spice => spice.name.toLowerCase().includes(inputValue));
+                    app.render(searchResults);
+                }
+            }
         },
 
         performSearch: function () {

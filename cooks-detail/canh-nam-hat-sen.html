@@ -416,6 +416,25 @@
             }
         }
     }
+    // tìm kiếm
+    var searchInput = document.getElementById('searchInput');
+    var searchBtn = document.getElementById('searchButton');
+
+    searchInput.addEventListener('keyup', event => {
+        var inputValue = searchInput.value; // Lấy giá trị input tại thời điểm sự kiện keyup
+        if (event.key === 'Enter' && inputValue !== "") {
+            var encodedValue = encodeURIComponent(inputValue);
+            window.location.href = '/home.html?search=' + encodedValue;
+        }
+    });
+
+    searchBtn.addEventListener('click', function(event) {
+        var inputValue = searchInput.value; // Lấy giá trị input tại thời điểm nhấn nút tìm kiếm
+        if (inputValue !== "") {
+            var encodedValue = encodeURIComponent(inputValue);
+            window.location.href = '/home.html?search=' + encodedValue;
+        }
+    });
 </script>
 
 

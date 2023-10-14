@@ -328,6 +328,11 @@ h3 {
     color: var(--while-color);
 }
 
+/* .group-right {
+    text-align: right;
+    padding: 0 15px 0 15px;
+} */
+
 .search {
     /* height: 119px; */
     background: url(https://monngonmoingay.com/wp-content/themes/monngonmoingay/images/bg-slide-home.png.webp) repeat-x -40px top;

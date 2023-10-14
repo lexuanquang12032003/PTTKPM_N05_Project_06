@@ -30,7 +30,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-
 const cooking = {
     cooks: [],
     currentPage: 1, // Trang hiện tại
@@ -97,6 +96,7 @@ const cooking = {
     },
 
     start: function() {
+
         // Fetch the data from the JSON file
         fetch('cooks-detail/datas/cooks.json')
             .then(response => response.json())
@@ -122,7 +122,19 @@ const cooking = {
         searchButton.addEventListener('click', () => {
             this.performSearch();
         });
+
+        window.onload = function() {
+            // Lấy giá trị từ URL
+            var urlParams = new URLSearchParams(window.location.search);
+            var inputValue = urlParams.get('search');
+            console.log(inputValue);
+            if (inputValue) {
+                const searchResults = cooking.cooks.filter(cook => cook.name.toLowerCase().includes(inputValue));
+                cooking.render(searchResults);
+            }
+        }
     },
+    
 
     performSearch: function() {
         this.currentPage = 1; // Reset trang về 1 sau khi tìm kiếm
@@ -136,7 +148,5 @@ const cooking = {
     },
 
     // favourite
-    
-    
 }
 cooking.start();
