@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kế hoạch nấu ăn</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="/assets/css/base.css">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/home.css">
+    <link rel="stylesheet" href="/assets//fonts/fontawesome-free-6.4.0-web/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app">
+        <header class="header">
+            <div class="grid">
+                <div class="grid__row">
+                    <div class="grid__column-1">
+                        <a href="" class="header__logo-link">
+                            <img src="https://monngonmoingay.com/wp-content/uploads/2020/10/logo-aji-copy-3.png.webp" alt="" class="header__logo-img">
+                        </a>
+                    </div>
+                    <div class="grid__column-1">
+                        <a href="" class="header__logo-link">
+                            <img src="https://monngonmoingay.com/wp-content/uploads/2020/10/logo-mnmn.png.webp" alt="" class="header__logo-img">
+                        </a>
+                    </div>
+                    <div class="grid__column-1">
+                        <a href="" class="header__logo-link">
+                            <img src="	https://monngonmoingay.com/wp-content/uploads/2022/07/nau-chuan-an-lanh-mnmn.png" alt="" class="header__logo-img">
+                        </a>
+                    </div>
+                    <div class="grid__column-9">
+                        <div class="header__top">
+                            <span class="login">Đăng Nhập</span>
+                            <span class="seperate">|</span>
+                            <span class="register">
+                                <span href="" class="register-link">Đăng Ký</span>
+                            </span>
+                        </div>
+                        <nav class="header__navbar">
+                            <ul class="header__navbar-list">
+                                <li class="header__navbar-item">
+                                    <a href="/home.html" class="header__navbar-item-link">
+                                        Danh Mục Thực Đơn
+                                    </a>
+                                </li>
+                                <li class="header__navbar-item">
+                                    <a href="/home.html" class="header__navbar-item-link">
+                                        Kế Hoạch Nấu Ăn
+                                    </a>
+                                </li>
+                                <li class="header__navbar-item">
+                                    <a href="/spice.html" class="header__navbar-item-link">
+                                        Gia Vị Bạn Cần
+                                    </a>
+                                </li>
+                                <li class="header__navbar-item header__navbar-item-4">
+                                    <a href="/favourite.html" class="header__navbar-item-link">
+                                        Công Thức Yêu Thích
+                                    </a>
+                                    <!-- <div class="header__navbar-info">
+                                        <ul class="header__navbar-info-list">
+                                            <li class="header__navbar-info-item">
+                                                <a href="" class="header__navbar-info-link">
+                                                    Thông tin dinh dưỡng
+                                                </a>
+                                            </li>
+                                            <li class="header__navbar-info-item">
+                                                <a href="" class="header__navbar-info-link">
+                                                    Mách nhỏ
+                                                </a>
+                                            </li>
+                                            <li class="header__navbar-info-item">
+                                                <a href="" class="header__navbar-info-link1">
+                                                    Hỏi đáp
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div> -->
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- search -->
+        <div class="search">
+            <div class="grid blocksearch">
+                <div class="grid__row">
+                    <div class="grid__column-2"></div>
+                    <div class="grid__column-8">
+                        <div class="grid__row">
+                            <div class="grid__column-9">
+                                <h4 class="search__title">Tìm kiếm công thức, nguyên liệu, cách nấu, dịp nấu,...</h4>
+                            </div>
+                            <div class="grid__column-3">
+                            </div>
+                        </div>
+                        <div class="searchbox">
+                            <div class="search__input">
+                                <input type="text" id="searchInput" class="search__input-text" placeholder="Nhập tại đây..." class="placeholder-color">
+                                <button id="searchButton" class="search__input-btn">
+                                    <i class="search__input-btn-icon fa-solid fa-magnifying-glass"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid__column-2"></div>
+                </div>
+            </div>
+        </div>
+        <!-- plan -->
+        <div class="plan">
+            <div class="grid">
+                <div class="grid__row">
+                    <div class="plan-heading">
+                        <div class="plan-heading__img">
+                            <img width="94" height="25" src="https://monngonmoingay.com/wp-content/uploads/2020/10/icon-kh-goiy.png.webp" alt="">
+                        </div>
+                        <div class="plan-heading__title">
+                            <h1>MÓN NGON MỖI NGÀY GỢI Ý</h1>
+                        </div>
+                        <div class="plan-heading__text">
+                            <div class="plan-heading__share">
+                                Chia sẻ:
+                                <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://monngonmoingay.com/mon-ngon-goi-y/?start=18/09/2023&end=24/09/2023">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </a> 
+                                <a target="_blank" href="https://workspaceupdates.googleblog.com/2023/04/new-community-features-for-google-chat-and-an-update-currents%20.html">
+                                    <i class="fa-brands fa-google-plus-g"></i>
+                                </a>
+                                <a target="_blank" href="https://twitter.com/home?status=http://monngonmoingay.com/mon-ngon-goi-y/?start=18/09/2023&end=24/09/2023">
+                                    <i class="fa-brands fa-twitter"></i>
+                                </a>
+                            </div>
+                            Không tốn thời gian suy nghĩ "Hôm nay ăn gì?" - Cùng lên kế hoạch nấu ăn cho cả tuần để vào bếp nhàn tênh!
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid">
+                <div class="grid__row">      
+                    <!-- thứ 2 -->
+                    <div class="plan-item">
+                        <div class="plan-item__head">
+                            <b>THỨ HAI</b>
+                        </div>
+                        <div class="plan-cover">
+                            <div class="plan-item__box">
+                                <div class="plan-box__buaan">
+                                    Buổi sáng
+                                </div>
+                                <div class="plan-box__cover">
+                                    <a href="/cooks-detail/cot-let-chien-sa-ot.html">
+                                        <img src="https://monngonmoingay.com/wp-content/uploads/2021/11/cot-let-chien-sa-ot-500.jpg" alt="">
+                                    </a>
+                                    <div class="plan-box__title">
+                                        <a href="/cooks-detail/cot-let-chien-sa-ot.html">Cốt lết chiên sả ớt</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="plan-cover">
+                            <div class="plan-item__box trua">
+                                <div class="plan-box__buaan">
+                                    Buổi trưa
+                                </div>
+                                <div class="plan-box__cover">
+                                    <a href="/cooks-detail/banh-ran-trung-pho-mai.htm">
+                                        <img src="https://monngonmoingay.com/wp-content/uploads/2021/08/banh-ran-kep-trung-pho-mai-500.jpg" alt="">
+                                    </a>
+                                    <div class="plan-box__title">
+                                        <a href="/cooks-detail/banh-ran-trung-pho-mai.htm">Bánh rán trứng phô mai</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="plan-cover">
+                            <div class="plan-item__box toi">
+                                <div class="plan-box__buaan">
+                                    Buổi tối
+                                </div>
+                                <div class="plan-box__cover">
+                                    <a href="/cooks-detail/khoai-chien-lac-mayo-me-la-que.html">
+                                        <img src="https://monngonmoingay.com/wp-content/uploads/2023/08/khoai-chien-lac-mayo-me-500.jpg" alt="">
+                                    </a>
+                                    <div class="plan-box__title">
+                                        <a href="/cooks-detail/khoai-chien-lac-mayo-me-la-que.html">Khoai chiên lắc mayo mè lá quế</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- thứ 3 -->
+                    <div class="plan-item">
+                        <div class="plan-item__head">
+                            <b>THỨ BA &nbsp;</b>
+                        </div>
+                        <div class="plan-cover">
+                            <div class="plan-item__box">
+                                <div class="plan-box__buaan">
+                                    Buổi sáng
+                                </div>
+                                <div class="plan-box__cover">
+                                    <a href="/cooks-detail/matcha-flan.html">
+                                        <img src="https://monngonmoingay.com/wp-content/uploads/2023/03/matcha-flan-500.jpg" alt="">
+                                    </a>
+                                    <div class="plan-box__title">
+                                        <a href="/cooks-detail/matcha-flan.html">Matcha flan</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="plan-cover">
+                            <div class="plan-item__box trua">
+                                <div class="plan-box__buaan">
+                                    Buổi trưa
+                                </div>
+                                <div class="plan-box__cover">
+                                    <a href="/cooks-detail/canh-nam-hat-sen.html">
+                                        <img src="https://monngonmoingay.com/wp-content/uploads/2015/08/canh-nam-hat-sen-500.jpg.webp" alt="">
+                                    </a>
+                                    <div class="plan-box__title">
+                                        <a href="/cooks-detail/canh-nam-hat-sen.html">Canh nấm hạt sen</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="plan-cover">
+                            <div class="plan-item__box toi">
+                                <div class="plan-box__buaan">
+                                    Buổi tối
+                                </div>
+                                <div class="plan-box__cover">
+                                    <a href="/cooks-detail/ca-ri-ga.html">
+                                        <img src="https://monngonmoingay.com/wp-content/uploads/2008/04/ca-ri-ga-500.jpg" alt="">
+                                    </a>
+                                    <div class="plan-box__title">
+                                        <a href="/cooks-detail/ca-ri-ga.html">Cà ri gà</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- thứ 4 -->
+                    <div class="plan-item">
+                        <div class="plan-item__head">
+                            <b>THỨ TƯ &nbsp;</b>
+                        </div>
+                        <div class="plan-cover">
+                            <div class="plan-item__box">
+                                <div class="plan-box__buaan">
+                                    Buổi sáng
+                                </div>
+                                <div class="plan-box__cover">
+                                    <a href="/cooks-detail/salad-cam-tinh-yeu.html">
+                                        <img src="https://monngonmoingay.com/wp-content/uploads/2023/02/salad-cam-tinh-yeu-500.jpg" alt="">
+                                    </a>
+                                    <div class="plan-box__title">
+                                        <a href="/cooks-detail/salad-cam-tinh-yeu.html">Salad cam tình yêu</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="plan-cover">
+                            <div class="plan-item__box trua">
+                                <div class="plan-box__buaan">
+                                    Buổi trưa
+                                </div>
+                                <div class="plan-box__cover">
+                                    <a href="/cooks-detail/smoothies-tra-sua-dau.html">
+                                        <img src="https://monngonmoingay.com/wp-content/uploads/2021/11/Smoothies-tra-sua-dau-500.jpg" alt="">
+                                    </a>
+                                    <div class="plan-box__title">
+                                        <a href="/cooks-detail/smoothies-tra-sua-dau.html">Smoothies trà sữa dâu</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="plan-cover">
+                            <div class="plan-item__box toi">
+                                <div class="plan-box__buaan">
+                                    Buổi tối
+                                </div>
+                                <div class="plan-box__cover">
+                                    <a href="/cooks-detail/heo-kho-tau.html">
+                                        <img src="https://monngonmoingay.com/wp-content/uploads/2023/01/heo-kho-tau-500.jpg" alt="">
+                                    </a>
+                                    <div class="plan-box__title">
+                                        <a href="/cooks-detail/heo-kho-tau.html">Heo kho tàu</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- thứ 5 -->
+                    <div class="plan-item">
+                        <div class="plan-item__head">
+                            <b>THỨ NĂM</b>
+                        </div>
+                        <div class="plan-cover">
+                            <div class="plan-item__box">
+                                <div class="plan-box__buaan">
+                                    Buổi sáng
+                                </div>
+                                <div class="plan-box__cover">
+                                    <a href="/cooks-detail/kho-qua-nhoi-nam-kho-nuoc-tuong.html">
+                                        <img src="https://monngonmoingay.com/wp-content/uploads/2015/08/kho-qua-nhoi-nam-kho-nuoc-tuong-500.jpg" alt="">
+                                    </a>
+                                    <div class="plan-box__title">
+                                        <a href="/cooks-detail/kho-qua-nhoi-nam-kho-nuoc-tuong.html">Khổ qua nhồi nấm kho nước tương</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="plan-cover">
+                            <div class="plan-item__box trua">
+                                <div class="plan-box__buaan">
+                                    Buổi trưa
+                                </div>
+                                <div class="plan-box__cover">
+                                    <a href="/cooks-detail/suon-chien-xot-man.html">
+                                        <img src="https://monngonmoingay.com/wp-content/uploads/2015/08/suon-chien-xot-man-500.jpg" alt="">
+                                    </a>
+                                    <div class="plan-box__title">
+                                        <a href="/cooks-detail/suon-chien-xot-man.html">Sườn chiên xốt mận</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="plan-cover">
+                            <div class="plan-item__box toi">
+                                <div class="plan-box__buaan">
+                                    Buổi tối
+                                </div>
+                                <div class="plan-box__cover">
+                                    <a href="/cooks-detail/com-chien-thap-cam.html">
+                                        <img src="https://monngonmoingay.com/wp-content/uploads/2021/05/com-chien-thap-cam-500.jpg.webp" alt="">
+                                    </a>
+                                    <div class="plan-box__title">
+                                        <a href="/cooks-detail/com-chien-thap-cam.html">Cơm chiên thập cẩm</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- thứ 6 -->
+                    <div class="plan-item">
+                        <div class="plan-item__head">
+                            <b>THỨ SÁU</b>
+                        </div>
+                        <div class="plan-cover">
+                            <div class="plan-item__box">
+                                <div class="plan-box__buaan">
+                                    Buổi sáng
+                                </div>
+                                <div class="plan-box__cover">
+                                    <a href="/cooks-detail/dau-mo-kep-pho-mai-chien.html">
+                                        <img src="https://monngonmoingay.com/wp-content/uploads/2021/12/dau-mo-kep-pho-mai-chien-500.jpg" alt="">
+                                    </a>
+                                    <div class="plan-box__title">
+                                        <a href="/cooks-detail/dau-mo-kep-pho-mai-chien.html">Đậu mơ kẹp phô mai chiên</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="plan-cover">
+                            <div class="plan-item__box trua">
+                                <div class="plan-box__buaan">
+                                    Buổi trưa
+                                </div>
+                                <div class="plan-box__cover">
+                                    <a href="/cooks-detail/nem-vuong-chay.html">
+                                        <img src="https://monngonmoingay.com/wp-content/uploads/2023/02/nem-vuong-chay-500.jpg.webp" alt="">
+                                    </a>
+                                    <div class="plan-box__title">
+                                        <a href="/cooks-detail/nem-vuong-chay.html">Nem vuông chay</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="plan-cover">
+                            <div class="plan-item__box toi">
+                                <div class="plan-box__buaan">
+                                    Buổi tối
+                                </div>
+                                <div class="plan-box__cover">
+                                    <a href="/cooks-detail/ca-nuc-kho-thom.html">
+                                        <img src="https://monngonmoingay.com/wp-content/uploads/2015/08/ca-nuc-kho-thom-500.jpg" alt="">
+                                    </a>
+                                    <div class="plan-box__title">
+                                        <a href="/cooks-detail/ca-nuc-kho-thom.html">Cá nục kho thơm</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- thứ 7 -->
+                    <div class="plan-item">
+                        <div class="plan-item__head">
+                            <b>THỨ BẢY</b>
+                        </div>
+                        <div class="plan-cover">
+                            <div class="plan-item__box">
+                                <div class="plan-box__buaan">
+                                    Buổi sáng
+                                </div>
+                                <div class="plan-box__cover">
+                                    <a href="/cooks-detail/banh-muffin-chuoi-socola.html">
+                                        <img src="https://monngonmoingay.com/wp-content/uploads/2022/11/banh-muffin-chuoi-socola-500.jpg" alt="">
+                                    </a>
+                                    <div class="plan-box__title">
+                                        <a href="/cooks-detail/banh-muffin-chuoi-socola.html">Bánh muffin chuối socola</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="plan-cover">
+                            <div class="plan-item__box trua">
+                                <div class="plan-box__buaan">
+                                    Buổi trưa
+                                </div>
+                                <div class="plan-box__cover">
+                                    <a href="/cooks-detail/cot-let-chien-sa-ot.html">
+                                        <img src="https://monngonmoingay.com/wp-content/uploads/2021/11/cot-let-chien-sa-ot-500.jpg" alt="">
+                                    </a>
+                                    <div class="plan-box__title">
+                                        <a href="/cooks-detail/cot-let-chien-sa-ot.html">Cốt lết chiên sả ớt</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="plan-cover">
+                            <div class="plan-item__box toi">
+                                <div class="plan-box__buaan">
+                                    Buổi tối
+                                </div>
+                                <div class="plan-box__cover">
+                                    <a href="/cooks-detail/banh-ran-trung-pho-mai.html">
+                                        <img src="https://monngonmoingay.com/wp-content/uploads/2021/08/banh-ran-kep-trung-pho-mai-500.jpg" alt="">
+                                    </a>
+                                    <div class="plan-box__title">
+                                        <a href="/cooks-detail/banh-ran-trung-pho-mai.html">Bánh rán trứng phô mai</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- chủ nhật -->
+                    <div class="plan-item">
+                        <div class="plan-item__head">
+                            <b>CHỦ NHẬT</b>
+                        </div>
+                        <div class="plan-cover">
+                            <div class="plan-item__box">
+                                <div class="plan-box__buaan">
+                                    Buổi sáng
+                                </div>
+                                <div class="plan-box__cover">
+                                    <a href="/cooks-detail/khoai-chien-lac-mayo-me-la-que.html">
+                                        <img src="https://monngonmoingay.com/wp-content/uploads/2023/08/khoai-chien-lac-mayo-me-500.jpg" alt="">
+                                    </a>
+                                    <div class="plan-box__title">
+                                        <a href="/cooks-detail/khoai-chien-lac-mayo-me-la-que.html">Khoai chiên lắc mayo mè lá quế</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="plan-cover">
+                            <div class="plan-item__box trua">
+                                <div class="plan-box__buaan">
+                                    Buổi trưa
+                                </div>
+                                <div class="plan-box__cover">
+                                    <a href="/cooks-detail/matcha-flan.html">
+                                        <img src="https://monngonmoingay.com/wp-content/uploads/2023/03/matcha-flan-500.jpg" alt="">
+                                    </a>
+                                    <div class="plan-box__title">
+                                        <a href="/cooks-detail/matcha-flan.html">Matcha flan</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="plan-cover">
+                            <div class="plan-item__box toi">
+                                <div class="plan-box__buaan">
+                                    Buổi tối
+                                </div>
+                                <div class="plan-box__cover">
+                                    <a href="/cooks-detail/canh-nam-hat-sen.html">
+                                        <img src="https://monngonmoingay.com/wp-content/uploads/2015/08/canh-nam-hat-sen-500.jpg.webp" alt="">
+                                    </a>
+                                    <div class="plan-box__title">
+                                        <a href="/cooks-detail/canh-nam-hat-sen.html">Canh nấm hạt sen</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- footer -->
+        <footer class="footer">
+            <div class="grid">
+                <div class="grid__row">
+                    <div class="grid__column-detailmain footer__text">
+                        Copyright © 2021 • Ajinomoto Vietnam • All rights reserved
+                        <a class="footer__link" href="https://www.dmca.com/Protection/Status.aspx?ID=9b5c3473-968a-4049-b577-9dc6d3fda2f5&refurl=https://monngonmoingay.com/tim-kiem-mon-ngon/" target="_blank">
+                            <img width="200" height="40" src="https://images.dmca.com/Badges/dmca-badge-w200-5x1-09.png?ID=9b5c3473-968a-4049-b577-9dc6d3fda2f5" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>

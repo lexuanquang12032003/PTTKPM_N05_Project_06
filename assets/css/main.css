@@ -436,3 +436,155 @@
 .other-title {
     margin-bottom: 10px;
 }
+
+
+/* plan */
+.plan {
+    padding-bottom: 50px;
+}
+
+.plan-heading {
+    padding-top: 10px;
+}
+
+.plan-heading__img {
+    margin: 24px 0 10px 0;
+    height: 25px;
+}
+
+.plan-heading__title h1 {
+    font-size: 21px;
+    line-height: 24px;
+    margin-bottom: 8px;
+}
+
+.plan-heading__text {
+    margin-top: 10px;
+    margin-bottom: 24px;
+}
+
+.plan-heading__share {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.plan-heading__text i::before {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px #fff solid;
+    color: #eb232a;
+    background: #fff;
+    float: left;
+    text-align: center;
+    line-height: 30px;
+    box-shadow: 0 0 5px 0 #e3e3e3;
+    margin-left: 8px;
+}
+
+.plan-heading__text i:hover::before {
+    color: white;
+    background-color: #dc3545;
+}
+
+/* plan-box */
+.plan-item {
+    width: 14.2%;
+}
+
+.plan-item__head {
+    text-align: center;
+    background-color: #9d763f;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 5px 0;
+    border-right: 1px #f2f2f2 solid;
+}
+
+.plan-cover {
+    padding: 2px;
+    /* height: 150px; */
+}
+
+.plan-item__box {
+    background: #b2e1f3;
+    padding: 7px;
+    border-radius: 5px;
+    padding-bottom: 20px;
+}
+
+.plan-box__buaan {
+    color: #9d763f;
+    font-weight: 600;
+    position: relative;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.plan-box__cover {
+    position: relative;
+    z-index: 1;
+}
+
+.plan-box__cover:hover .plan-box__title {
+    visibility: visible;
+    opacity: 1;
+}
+
+.plan-box__cover:hover {
+    color: red;
+}
+
+.plan-box__cover img {
+    width: 100%;
+    max-height: 70px;
+}
+
+.plan-box__buaan::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    border-bottom: 2px #9d763f solid;
+    bottom: 0;
+    left: 42%;
+}
+
+.plan-box__title {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    z-index: 2;
+    background: url(https://monngonmoingay.com/wp-content/themes/monngonmoingay/images/bg-one-post-title.png.webp) repeat left top;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+    height: 66px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity ease 0.5s;
+}
+
+.plan-box__title a {
+    color: #444;
+    font-family: 'Nunito Sans',sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.plan-box__title a:hover {
+    color: #dc3545;
+}
+
+.trua {
+    background-color: #fdf5a4;;
+}
+
+.toi {
+    background-color: #d4e5a1;
+}
