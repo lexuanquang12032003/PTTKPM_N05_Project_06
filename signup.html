@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="/assets/css/base.css"> -->
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="login-box">
+        <div class="login">
+            <div class="login-header">
+                <h5 class="login-title">ĐĂNG KÝ</h5>
+                <!-- <button class="login-close">
+                    <span>×</span>
+                </button> -->
+            </div>
+            <div class="login-body">
+                <form id="signup-form" action="">
+                    <div class="login-form__label">Họ và tên:</div>
+                    <input id="signup-hoten" type="text" class="login-form__input">
+    
+                    <div class="login-form__label">Email:</div>
+                    <input id="signup-email" type="text" class="login-form__input">
+                    
+                    <div class="login-form__label">Mật khẩu:</div>
+                    <input id="signup-matkhau" type="password" class="login-form__input">
+
+                    <button type="submit" id="signup-btn" class="login-signup-btn">ĐĂNG KÝ</button>
+                    <div class="login-signup">
+                        <!-- Bạn chưa có tài khoản? -->
+                        <a class="link-signup" href="/login.html">Đăng Nhập</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var btn = document.getElementById('signup-btn');
+        var hoTen = document.getElementById('signup-hoten');
+        var email = document.getElementById('signup-email');
+        var matKhau = document.getElementById('signup-matkhau');
+        var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zAZ0-9]{2,4})+$/;
+
+        btn.addEventListener('click', function(event) {
+            let isValid = true; // Mặc định, thông tin đúng
+
+            // Kiểm tra họ tên
+            if (hoTen.value === '') {
+                alert("Hãy nhập họ tên!");
+                isValid = false; // Đặt isValid thành false nếu có lỗi
+            }
+
+            // Kiểm tra email
+            if (!filter.test(email.value)) {
+                alert("Email không hợp lệ!");
+                isValid = false; // Đặt isValid thành false nếu có lỗi
+            }
+
+            // Kiểm tra mật khẩu
+            if (matKhau.value.length < 6) {
+                alert("Mật khẩu tối thiểu 6 ký tự!");
+                isValid = false; // Đặt isValid thành false nếu có lỗi
+            }
+
+            if (isValid) {
+                // Tạo đối tượng người dùng
+                const user = {
+                    hoTen: hoTen.value,
+                    email: email.value,
+                    matKhau: matKhau.value
+                };
+
+                // Chuyển đối tượng người dùng thành chuỗi JSON
+                const userJSON = JSON.stringify(user);
+
+                // Lưu thông tin người dùng vào Local Storage
+                localStorage.setItem(email.value, userJSON);
+
+                // Xuất thông tin người dùng ra màn hình
+                console.log('Thông tin người dùng đã lưu:', user);
+
+                // Đặt các trường nhập liệu về giá trị mặc định
+                hoTen.value = '';
+                email.value = '';
+                matKhau.value = '';
+                alert("Đăng kí thành công!");
+            } else {
+                event.preventDefault(); // Ngăn chặn việc đăng ký khi có lỗi
+            }
+        });
+    });
+    console.log(localStorage);
+</script>
