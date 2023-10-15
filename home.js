@@ -2,6 +2,11 @@ const $ = document.querySelector.bind(document)
 const $$ = document.querySelectorAll.bind(document)        
 
 document.addEventListener("DOMContentLoaded", function () {
+    var urlParams = new URLSearchParams(window.location.search);
+    var nameValue = urlParams.get('name');
+    console.log(nameValue);
+    $('.login-name').innerHTML = nameValue;
+
     // Lấy danh sách tất cả các liên kết trang
     var pageLinks = document.querySelectorAll('.page-numbers');
 
@@ -150,3 +155,4 @@ const cooking = {
     // favourite
 }
 cooking.start();
+

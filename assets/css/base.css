@@ -142,6 +142,17 @@ h3 {
     margin: 0 auto;
 }
 
+@keyframes Growth {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    } 
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+}
 
 /* navbar */
 .header {
@@ -155,16 +166,78 @@ h3 {
     height: 21px;
     display: flex;
     justify-content: flex-end;
+    align-items: center;
     margin-top: 10px;
+    position: relative;
 }
 
-.login {
-    font-size: 1.4rem;
-    color: #000;
-    cursor: pointer;
+.header__top:hover .login-menu {
+    /* visibility: visible; */
+    display: block;
 }
 
-.seperate {
+.login-img {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #999;
+    margin: 0 4px;
+}
+
+.login-hi {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    font-family: 'Nunito Sans',sans-serif;
+}
+
+.login-name {
+    font-size: 14px;
+    font-family: 'Nunito Sans',sans-serif;
+    font-weight: bolder;
+    line-height: 1.5;
+    color: #212529
+}
+
+.login-icon {
+    font-size: 11px;
+    margin-left: 4px;
+}
+
+
+.login-menu {
+    position: absolute;
+    top: 20px;
+    right: 0;
+    width: 220px;
+    background: #fff;
+    z-index: 5;
+    padding: 10px;
+    text-align: left;
+    list-style-type: none;
+    box-shadow: 0 0 5px 0 #e3e3e3;
+    transform-origin: 100%top;
+    animation: Growth ease 0.25s;
+    /* visibility: hidden; */
+    display: none;
+}
+
+.login-menu li {
+    padding: 3px 0;
+}
+
+.login-menu-link{
+    font-size: 14px;
+    color: #444;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.login-menu li:hover .login-menu-link {
+    color: #eb232a;
+}
+
+/* .seperate {
     font-size: 1.4rem;
     margin: 0 7px;
 }
@@ -178,7 +251,7 @@ h3 {
     color: var(--text-color);
     text-decoration: none;
     text-align: center;
-}
+} */
 
 .header__logo {
     display: flex;

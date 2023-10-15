@@ -56,7 +56,8 @@
                     event.preventDefault();
                 }
                 if(myArray.email === email.value && myArray.matKhau === matKhau.value) {
-                    window.location="home.html";
+                    var encodedValue = encodeURIComponent(myArray.hoTen);
+                    window.location.href = 'home.html?name=' + encodedValue;
                     event.preventDefault();
                 } else {
                     alert("Tài khoản hoặc mật khẩu không đúng!");
