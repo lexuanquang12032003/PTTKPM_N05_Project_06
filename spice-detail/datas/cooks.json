@@ -13,7 +13,7 @@
         "path": "/cooks-detail/banh-ran-trung-pho-mai.html",
         "ration": "4 người",
         "vote": "37",
-        "spices": ["HẠT NÊM AJI-NGON® HEO", "NƯỚC TƯƠNG \"PHÚ SĨ\""]
+        "spices": ["XỐT MAYONNAISE AJI-MAYO® VỊ NGUYÊN BẢN", "HẠT NÊM AJI-NGON® GÀ", "BỘT BÁNH RÁN PHA SẴN BỮA SÁNG DINH DƯỠNG"]
     },
     {
         "name":"Khoai chiên lắc mayo mè lá quế",
@@ -21,7 +21,7 @@
         "path": "/cooks-detail/khoai-chien-lac-mayo-me-la-que.html",
         "ration": "4 người",
         "vote": "78",
-        "spices": ["HẠT NÊM AJI-NGON® HEO", "NƯỚC TƯƠNG \"PHÚ SĨ\""]
+        "spices": ["GIA VỊ NÊM SẴN AJI-QUICK® BỘT TẨM KHÔ CHIÊN GIÒN", "XỐT MAYONNAISE AJI-MAYO® VỊ NGUYÊN BẢN"]
     },
     {
         "name": "Matcha flan",
@@ -29,7 +29,7 @@
         "path": "/cooks-detail/matcha-flan.html",
         "ration": "2 người",
         "vote": "35",
-        "spices": ["HẠT NÊM AJI-NGON® HEO", "NƯỚC TƯƠNG \"PHÚ SĨ\""]
+        "spices": ["BLENDY® TRÀ MATCHA GẠO RANG"]
     },
     {
         "name": "Canh nấm hạt sen",
@@ -37,7 +37,7 @@
         "path": "/cooks-detail/canh-nam-hat-sen.html",
         "ration": "4 người",
         "vote": "138",
-        "spices": ["HẠT NÊM AJI-NGON® HEO", "NƯỚC TƯƠNG \"PHÚ SĨ\""]
+        "spices": ["HẠT NÊM AJI-NGON® NẤM"]
     },
     {
         "name": "Cà ri gà",
@@ -45,7 +45,7 @@
         "path": "/cooks-detail/ca-ri-ga.html",
         "ration": "4 người",
         "vote": "285",
-        "spices": ["HẠT NÊM AJI-NGON® HEO", "NƯỚC TƯƠNG \"PHÚ SĨ\""]
+        "spices": ["HẠT NÊM AJI-NGON® GÀ"]
     },
     {
         "name": "Salad cam tình yêu",
@@ -53,7 +53,7 @@
         "path": "/cooks-detail/salad-cam-tinh-yeu.html",
         "ration": "4 người",
         "vote": "35",
-        "spices": ["HẠT NÊM AJI-NGON® HEO", "NƯỚC TƯƠNG \"PHÚ SĨ\""]
+        "spices": ["XỐT MAYONNAISE AJI-MAYO® VỊ NGỌT DỊU"]
     },
     {
         "name": "Smoothies trà sữa dâu",
@@ -61,7 +61,7 @@
         "path": "/cooks-detail/smoothies-tra-sua-dau.html",
         "ration": "2 người",
         "vote": "35",
-        "spices": ["HẠT NÊM AJI-NGON® HEO", "NƯỚC TƯƠNG \"PHÚ SĨ\""]
+        "spices": ["BLENDY™ TRÀ SỮA DÂU"]
     },
     {
         "name": "Heo kho tàu",
@@ -69,7 +69,7 @@
         "path": "/cooks-detail/heo-kho-tau.html",
         "ration": "4 người",
         "vote": "45",
-        "spices": ["HẠT NÊM AJI-NGON® HEO", "NƯỚC TƯƠNG \"PHÚ SĨ\""]
+        "spices": ["GIA VỊ NÊM SẴN AJI-QUICK® THỊT KHO TÀU"]
     },
     {
         "name": "Khổ qua nhồi nấm kho nước tương",
@@ -85,7 +85,7 @@
         "path": "/cooks-detail/suon-chien-xot-man.html",
         "ration": "4 người",
         "vote": "376",
-        "spices": ["HẠT NÊM AJI-NGON® HEO", "NƯỚC TƯƠNG \"PHÚ SĨ\""]
+        "spices": ["HẠT NÊM AJI-NGON® HEO", "GIA VỊ NÊM SẴN AJI-QUICK® BỘT CHIÊN GIÒN"]
     },
     {
         "name": "Cơm chiên thập cẩm",
@@ -93,7 +93,7 @@
         "path": "/cooks-detail/com-chien-thap-cam.html",
         "ration": "4 người",
         "vote": "43",
-        "spices": ["HẠT NÊM AJI-NGON® HEO", "NƯỚC TƯƠNG \"PHÚ SĨ\""]
+        "spices": ["HẠT NÊM AJI-NGON® NẤM", "NƯỚC TƯƠNG \"PHÚ SĨ\""]
     },
     {
         "name": "Đậu mơ kẹp phô mai chiên",
@@ -101,7 +101,7 @@
         "path": "/cooks-detail/dau-mo-kep-pho-mai-chien.html",
         "ration": "4 người",
         "vote": "43",
-        "spices": ["HẠT NÊM AJI-NGON® HEO", "NƯỚC TƯƠNG \"PHÚ SĨ\""]
+        "spices": ["HẠT NÊM AJI-NGON® HEO", "GIA VỊ NÊM SẴN AJI-QUICK® BỘT TẨM KHÔ CHIÊN GIÒN"]
     },
     {
         "name": "Nem vuông chay",
@@ -109,7 +109,7 @@
         "path": "/cooks-detail/nem-vuong-chay.html",
         "ration": "4 người",
         "vote": "57",
-        "spices": ["HẠT NÊM AJI-NGON® HEO", "NƯỚC TƯƠNG \"PHÚ SĨ\""]
+        "spices": ["GIẤM GẠO LÊN MEN AJINOMOTO", "HẠT NÊM AJI-NGON® NẤM"]
     },
     {
         "name": "Cá nục kho thơm",
@@ -117,7 +117,7 @@
         "path": "/cooks-detail/ca-nuc-kho-thom.html",
         "ration": "4 người",
         "vote": "186",
-        "spices": ["HẠT NÊM AJI-NGON® HEO", "NƯỚC TƯƠNG \"PHÚ SĨ\""]
+        "spices": ["BỘT NGỌT AJI-NO-MOTO®"]
     },
     {
         "name": "Bánh muffin chuối socola",
@@ -125,6 +125,6 @@
         "path": "/cooks-detail/banh-muffin-chuoi-socola.html",
         "ration": "2 người",
         "vote": "21",
-        "spices": ["HẠT NÊM AJI-NGON® HEO", "NƯỚC TƯƠNG \"PHÚ SĨ\""]
+        "spices": []
     }
 ]
