@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kế hoạch nấu ăn</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/home.css">
+    <link rel="stylesheet" href="assets//fonts/fontawesome-free-6.4.0-web/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app">
+        <header class="header">
+            <div class="grid">
+                <div class="grid__row">
+                    <div class="grid__column-1">
+                        <a href="" class="header__logo-link">
+                            <img src="https://monngonmoingay.com/wp-content/uploads/2020/10/logo-aji-copy-3.png.webp" alt="" class="header__logo-img">
+                        </a>
+                    </div>
+                    <div class="grid__column-1">
+                        <a href="" class="header__logo-link">
+                            <img src="https://monngonmoingay.com/wp-content/uploads/2020/10/logo-mnmn.png.webp" alt="" class="header__logo-img">
+                        </a>
+                    </div>
+                    <div class="grid__column-1">
+                        <a href="" class="header__logo-link">
+                            <img src="	https://monngonmoingay.com/wp-content/uploads/2022/07/nau-chuan-an-lanh-mnmn.png" alt="" class="header__logo-img">
+                        </a>
+                    </div>
+                    <div class="grid__column-9">
+                        <div class="header__top">
+                            <span class="login-hi">Xin Chào,</span>
+                            <img src="/assets/img/logophenikaa-uni.jpg" alt="" class="login-img">
+                            <span class="login-name"></span>
+                            <span class="login-icon">
+                                <i class="fa-solid fa-angle-down"></i>
+                            </span>
+                            <ul class="login-menu">
+                                <li>
+                                    <a href="" class="login-menu-link">
+                                        <i class="fa-solid fa-user"></i>
+                                        Quản lý tài khoản
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/favourite.html" class="login-menu-link">
+                                        <i class="fa-solid fa-list-ul"></i>
+                                        Danh sách món ăn yêu thích
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/plan.html" class="login-menu-link">
+                                        <i class="fa-solid fa-clipboard-question"></i>
+                                        Hôm nay ăn gì?
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/login.html" class="login-menu-link">
+                                        <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                                        Thoát
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <nav class="header__navbar">
+                            <ul class="header__navbar-list">
+                                <li class="header__navbar-item">
+                                    <a href="/home.html" class="header__navbar-item-link">
+                                        Danh Mục Thực Đơn
+                                    </a>
+                                </li>
+                                <li class="header__navbar-item">
+                                    <a href="/plan.html" class="header__navbar-item-link">
+                                        Kế Hoạch Nấu Ăn
+                                    </a>
+                                </li>
+                                <li class="header__navbar-item">
+                                    <a href="/spice.html" class="header__navbar-item-link">
+                                        Gia Vị Bạn Cần
+                                    </a>
+                                </li>
+                                <li class="header__navbar-item header__navbar-item-4">
+                                    <a href="/favourite.html" class="header__navbar-item-link">
+                                        Công Thức Yêu Thích
+                                    </a>
+                                    <!-- <div class="header__navbar-info">
+                                        <ul class="header__navbar-info-list">
+                                            <li class="header__navbar-info-item">
+                                                <a href="" class="header__navbar-info-link">
+                                                    Thông tin dinh dưỡng
+                                                </a>
+                                            </li>
+                                            <li class="header__navbar-info-item">
+                                                <a href="" class="header__navbar-info-link">
+                                                    Mách nhỏ
+                                                </a>
+                                            </li>
+                                            <li class="header__navbar-info-item">
+                                                <a href="" class="header__navbar-info-link1">
+                                                    Hỏi đáp
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div> -->
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- search -->
+        <div class="search">
+            <div class="grid blocksearch">
+                <div class="grid__row">
+                    <div class="grid__column-2"></div>
+                    <div class="grid__column-8">
+                        <div class="grid__row">
+                            <div class="grid__column-9">
+                                <h4 class="search__title">Tìm kiếm công thức, nguyên liệu, cách nấu, dịp nấu,...</h4>
+                            </div>
+                            <div class="grid__column-3">
+                                <!-- <a class="plan-heading__share__icon" target="_blank" href="https://www.facebook.com/monngonmoingay.ajinomoto">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </a> 
+                                <a class="plan-heading__share__icon" target="_blank" href="https://www.youtube.com/channel/UC-2EWHDbHnx5JOeyWfLdIxQ">
+                                    <i class="fa-brands fa-youtube"></i>
+                                </a>  -->
+                            </div>
+                        </div>
+                        <div class="searchbox">
+                            <div class="search__input">
+                                <input type="text" id="searchInput-add" class="search__input-text" placeholder="Nhập tại đây..." class="placeholder-color">
+                                <button id="searchButton-add" class="search__input-btn">
+                                    <i class="search__input-btn-icon fa-solid fa-magnifying-glass"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid__column-2">
+                        <!-- <i class="fa-solid fa-bell"></i> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- plan -->
+        <div class="plan">
+            <div class="grid">
+                <div class="grid__row">
+                    <div class="plan-heading">
+                        <div class="plan-heading__img">
+                            <img width="94" height="25" src="https://monngonmoingay.com/wp-content/uploads/2020/10/icon-kh-trongtuan.png.webp" alt="">
+                        </div>
+                        <div class="plan-heading__title">
+                            <h1>1 TUẦN CỦA BẠN</h1>
+                        </div>
+                        <div class="plan-heading__text">
+                            <div class="plan-heading__share">
+                                Chia sẻ:
+                                <a class="plan-heading__share__icon" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://monngonmoingay.com/mon-ngon-goi-y/?start=18/09/2023&end=24/09/2023">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </a> 
+                                <a class="plan-heading__share__icon" target="_blank" href="https://workspaceupdates.googleblog.com/2023/04/new-community-features-for-google-chat-and-an-update-currents%20.html">
+                                    <i class="fa-brands fa-google-plus-g"></i>
+                                </a>
+                                <a class="plan-heading__share__icon" target="_blank" href="https://twitter.com/home?status=http://monngonmoingay.com/mon-ngon-goi-y/?start=18/09/2023&end=24/09/2023">
+                                    <i class="fa-brands fa-twitter"></i>
+                                </a>
+                            </div>
+                            Chỉ cần 5 phút lên kế hoạch để cả tuần vào bếp thật dễ dàng và tiết kiệm!
+                        </div>
+                        <div class="planning">
+                            <a href="plan.html">
+                                Món ngon mỗi ngày gợi ý
+                            </a>
+                        </div>
+                        <div class="planning" id="savePlan">
+                            <a href="#">
+                                Lưu thực đơn
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid position-add">
+                <div class="grid__row">      
+                    <!-- thứ 2 -->
+                    <div class="plan-item">
+                        <div class="plan-item__head">
+                            <b>THỨ HAI</b>
+                        </div>
+                        <div class="plan-cover">
+                            <div class="plan-item__box1">
+                                <div class="plan-box__buaan">
+                                    Buổi sáng
+                                </div>
+                                <div class="plan-box__cover1">
+                                   <!--  -->
+                                </div>
+                                <div class="plan-btn" data-index="0">
+                                    <i class="fa-solid fa-plus"></i>
+                                    Thêm món
+                                </div>
+                            </div>
+                        </div>
+                        <div class="plan-cover">
+                            <div class="plan-item__box1 trua">
+                                <div class="plan-box__buaan">
+                                    Buổi trưa
+                                </div>
+                                <div class="plan-box__cover1">
+                                    <!--  -->
+                                </div>
+                                <div class="plan-btn" data-index="1">
+                                    <i class="fa-solid fa-plus"></i>
+                                    Thêm món
+                                </div>
+                            </div>
+                        </div>
+                        <div class="plan-cover">
+                            <div class="plan-item__box1 toi">
+                                <div class="plan-box__buaan">
+                                    Buổi tối
+                                </div>
+                                <div class="plan-box__cover1">
+                                    <!--  -->
+                                </div>
+                                <div class="plan-btn" data-index="2">
+                                    <i class="fa-solid fa-plus"></i>
+                                    Thêm món
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- thứ 3 -->
+                    <div class="plan-item">
+                        <div class="plan-item__head">
+                            <b>THỨ BA &nbsp;</b>
+                        </div>
+                        <div class="plan-cover">
+                            <div class="plan-item__box1">
+                                <div class="plan-box__buaan">
+                                    Buổi sáng
+                                </div>
+                                <div class="plan-box__cover1">
+                                    <!--  -->
+                                </div>
+                                <div class="plan-btn" data-index="3">
+                                    <i class="fa-solid fa-plus"></i>
+                                    Thêm món
+                                </div>
+                            </div>
+                        </div>
+                        <div class="plan-cover">
+                            <div class="plan-item__box1 trua">
+                                <div class="plan-box__buaan">
+                                    Buổi trưa
+                                </div>
+                                <div class="plan-box__cover1">
+                                    <!--  -->
+                                </div>
+                                <div class="plan-btn" data-index="4">
+                                    <i class="fa-solid fa-plus"></i>
+                                    Thêm món
+                                </div>
+                            </div>
+                        </div>
+                        <div class="plan-cover">
+                            <div class="plan-item__box1 toi">
+                                <div class="plan-box__buaan">
+                                    Buổi tối
+                                </div>
+                                <div class="plan-box__cover1">
+                                    <!--  -->
+                                </div>
+                                <div class="plan-btn" data-index="5">
+                                    <i class="fa-solid fa-plus"></i>
+                                    Thêm món
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- thứ 4 -->
+                    <div class="plan-item">
+                        <div class="plan-item__head">
+                            <b>THỨ TƯ &nbsp;</b>
+                        </div>
+                        <div class="plan-cover">
+                            <div class="plan-item__box1">
+                                <div class="plan-box__buaan">
+                                    Buổi sáng
+                                </div>
+                                <div class="plan-box__cover1">
+                                    <!--  -->
+                                </div>
+                                <div class="plan-btn" data-index="6">
+                                    <i class="fa-solid fa-plus"></i>
+                                    Thêm món
+                                </div>
+                            </div>
+                        </div>
+                        <div class="plan-cover">
+                            <div class="plan-item__box1 trua">
+                                <div class="plan-box__buaan">
+                                    Buổi trưa
+                                </div>
+                                <div class="plan-box__cover1">
+                                    <!--  -->
+                                </div>
+                                <div class="plan-btn" data-index="7">
+                                    <i class="fa-solid fa-plus"></i>
+                                    Thêm món
+                                </div>
+                            </div>
+                        </div>
+                        <div class="plan-cover">
+                            <div class="plan-item__box1 toi">
+                                <div class="plan-box__buaan">
+                                    Buổi tối
+                                </div>
+                                <div class="plan-box__cover1">
+                                    <!--  -->
+                                </div>
+                                <div class="plan-btn" data-index="8">
+                                    <i class="fa-solid fa-plus"></i>
+                                    Thêm món
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- thứ 5 -->
+                    <div class="plan-item">
+                        <div class="plan-item__head">
+                            <b>THỨ NĂM</b>
+                        </div>
+                        <div class="plan-cover">
+                            <div class="plan-item__box1">
+                                <div class="plan-box__buaan">
+                                    Buổi sáng
+                                </div>
+                                <div class="plan-box__cover1">
+                                    <!--  -->
+                                </div>
+                                <div class="plan-btn" data-index="9">
+                                    <i class="fa-solid fa-plus"></i>
+                                    Thêm món
+                                </div>
+                            </div>
+                        </div>
+                        <div class="plan-cover">
+                            <div class="plan-item__box1 trua">
+                                <div class="plan-box__buaan">
+                                    Buổi trưa
+                                </div>
+                                <div class="plan-box__cover1">
+                                   <!--  -->
+                                </div>
+                                <div class="plan-btn" data-index="10">
+                                    <i class="fa-solid fa-plus"></i>
+                                    Thêm món
+                                </div>
+                            </div>
+                        </div>
+                        <div class="plan-cover">
+                            <div class="plan-item__box1 toi">
+                                <div class="plan-box__buaan">
+                                    Buổi tối
+                                </div>
+                                <div class="plan-box__cover1">
+                                    <!--  -->
+                                </div>
+                                <div class="plan-btn" data-index="11">
+                                    <i class="fa-solid fa-plus"></i>
+                                    Thêm món
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- thứ 6 -->
+                    <div class="plan-item">
+                        <div class="plan-item__head">
+                            <b>THỨ SÁU</b>
+                        </div>
+                        <div class="plan-cover">
+                            <div class="plan-item__box1">
+                                <div class="plan-box__buaan">
+                                    Buổi sáng
+                                </div>
+                                <div class="plan-box__cover1">
+                                  <!--  -->
+                                </div>
+                                <div class="plan-btn" data-index="12">
+                                    <i class="fa-solid fa-plus"></i>
+                                    Thêm món
+                                </div>
+                            </div>
+                        </div>
+                        <div class="plan-cover">
+                            <div class="plan-item__box1 trua">
+                                <div class="plan-box__buaan">
+                                    Buổi trưa
+                                </div>
+                                <div class="plan-box__cover1">
+                                    <!--  -->
+                                </div>
+                                <div class="plan-btn" data-index="13">
+                                    <i class="fa-solid fa-plus"></i>
+                                    Thêm món
+                                </div>
+                            </div>
+                        </div>
+                        <div class="plan-cover">
+                            <div class="plan-item__box1 toi">
+                                <div class="plan-box__buaan">
+                                    Buổi tối
+                                </div>
+                                <div class="plan-box__cover1">
+                                    <!--  -->
+                                </div>
+                                <div class="plan-btn" data-index="14">
+                                    <i class="fa-solid fa-plus"></i>
+                                    Thêm món
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- thứ 7 -->
+                    <div class="plan-item">
+                        <div class="plan-item__head">
+                            <b>THỨ BẢY</b>
+                        </div>
+                        <div class="plan-cover">
+                            <div class="plan-item__box1">
+                                <div class="plan-box__buaan">
+                                    Buổi sáng
+                                </div>
+                                <div class="plan-box__cover1">
+                                    <!--  -->
+                                </div>
+                                <div class="plan-btn" data-index="15">
+                                    <i class="fa-solid fa-plus"></i>
+                                    Thêm món
+                                </div>
+                            </div>
+                        </div>
+                        <div class="plan-cover">
+                            <div class="plan-item__box1 trua">
+                                <div class="plan-box__buaan">
+                                    Buổi trưa
+                                </div>
+                                <div class="plan-box__cover1">
+                                    <!--  -->
+                                </div>
+                                <div class="plan-btn" data-index="16">
+                                    <i class="fa-solid fa-plus"></i>
+                                    Thêm món
+                                </div>
+                            </div>
+                        </div>
+                        <div class="plan-cover">
+                            <div class="plan-item__box1 toi">
+                                <div class="plan-box__buaan">
+                                    Buổi tối
+                                </div>
+                                <div class="plan-box__cover1">
+                                   <!--  -->
+                                </div>
+                                <div class="plan-btn" data-index="17">
+                                    <i class="fa-solid fa-plus"></i>
+                                    Thêm món
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- chủ nhật -->
+                    <div class="plan-item">
+                        <div class="plan-item__head">
+                            <b>CHỦ NHẬT</b>
+                        </div>
+                        <div class="plan-cover">
+                            <div class="plan-item__box1">
+                                <div class="plan-box__buaan">
+                                    Buổi sáng
+                                </div>
+                                <div class="plan-box__cover1">
+                                    <!--  -->
+                                </div>
+                                <div class="plan-btn" data-index="18">
+                                    <i class="fa-solid fa-plus"></i>
+                                    Thêm món
+                                </div>
+                            </div>
+                        </div>
+                        <div class="plan-cover">
+                            <div class="plan-item__box1 trua">
+                                <div class="plan-box__buaan">
+                                    Buổi trưa
+                                </div>
+                                <div class="plan-box__cover1">
+                                   <!--  -->
+                                </div>
+                                <div class="plan-btn" data-index="19">
+                                    <i class="fa-solid fa-plus"></i>
+                                    Thêm món
+                                </div>
+                            </div>
+                        </div>
+                        <div class="plan-cover">
+                            <div class="plan-item__box1 toi">
+                                <div class="plan-box__buaan">
+                                    Buổi tối
+                                </div>
+                                <div class="plan-box__cover1">
+                                    <!--  -->
+                                </div>
+                                <div class="plan-btn" data-index="20">
+                                    <i class="fa-solid fa-plus"></i>
+                                    Thêm món
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- footer -->
+        <footer class="footer">
+            <div class="grid">
+                <div class="grid__row">
+                    <div class="grid__column-detailmain footer__text">
+                        Copyright © 2021 • Ajinomoto Vietnam • All rights reserved
+                        <a class="footer__link" href="https://www.dmca.com/Protection/Status.aspx?ID=9b5c3473-968a-4049-b577-9dc6d3fda2f5&refurl=https://monngonmoingay.com/tim-kiem-mon-ngon/" target="_blank">
+                            <img width="200" height="40" src="https://images.dmca.com/Badges/dmca-badge-w200-5x1-09.png?ID=9b5c3473-968a-4049-b577-9dc6d3fda2f5" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!--  -->
+    <div class="addplan">
+        <div class="addplan-color"></div>
+        <div class="addplan-body">
+            <!-- search-add -->
+            <div class="search">
+                <div class="grid blocksearch">
+                    <div class="grid__row">
+                        <div class="grid__column-2"></div>
+                        <div class="grid__column-8">
+                            <div class="grid__row">
+                                <!-- <div class="grid__column-9">
+                                    <h4 class="search__title">Tìm kiếm công thức, nguyên liệu, cách nấu, dịp nấu,...</h4>
+                                </div>
+                                <div class="grid__column-3">
+                                </div> -->
+                            </div>
+                            <div class="searchbox">
+                                <div class="search__input">
+                                    <input type="text" id="searchInput" class="search__input-text placeholder-color" placeholder="Nhập tại đây...">
+                                    <button id="searchButton" class="search__input-btn">
+                                        <i class="search__input-btn-icon fa-solid fa-magnifying-glass"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__column-2"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- list-cook  -->
+            <div class="mainpage addplan-main-color addplan-main-scroll">
+                <div class="grid">
+                    <div class="grid__row">
+                        <div class="grid__column-detailmain">
+                            <!-- list -->
+                            <div class="grid__row mainpage-list">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- paging -->
+                <div class="paging">
+                    <!-- <a href="" class="page-numbers"><<</a> -->
+                    <!-- <a class="page-numbers current" id = "page1">1</a> -->
+                    <!-- <a href="" class="page-numbers" id = "page2">2</a> -->
+                    <!-- <a href="" class="page-numbers" id = "page3">3</a> -->
+                    <!-- <span class="page-numbers dots no-pointer-events">...</span> -->
+                    <!-- <a href="" class="page-numbers">8</a> -->
+                    <!-- <a href="" class="page-numbers">9</a> -->
+                    <!-- <a href="" class="page-numbers">10</a> -->
+                    <!-- <a href="" class="next page-numbers"> -->
+                        <!-- Tiếp -->
+                        <!-- <i class="page-numbers-icon fa-solid fa-angle-right"></i> -->
+                    <!-- </a> -->
+                    <!-- <a href="" class="page-numbers">>></a> -->
+                </div>
+            </div>
+            <!-- close -->
+            <div class="addplan-close">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    const $ = document.querySelector.bind(document);
+    const $$ = document.querySelectorAll.bind(document); 
+    
+    document.addEventListener("DOMContentLoaded", function () {
+    var urlParams = new URLSearchParams(window.location.search);
+    var nameValue = urlParams.get('name');
+    console.log(nameValue);
+    $('.login-name').innerHTML = nameValue;
+
+    // Lấy danh sách tất cả các liên kết trang
+    var pageLinks = document.querySelectorAll('.page-numbers');
+
+    // Lặp qua từng liên kết
+    pageLinks.forEach(function (link) {
+        // Gắn sự kiện click cho từng liên kết
+        link.addEventListener('click', function (event) {
+            // Ngăn chặn hành vi mặc định của liên kết (ngăn trình duyệt chuyển hướng)
+            event.preventDefault();
+
+            // Loại bỏ class "current" từ tất cả các liên kết trang
+            pageLinks.forEach(function (pageLink) {
+                pageLink.classList.remove('current');
+            });
+
+            // Thêm class "current" cho liên kết vừa được nhấp chuột
+            link.classList.add('current');
+
+            // Lấy số trang từ nội dung liên kết
+            const pageNumber = parseInt(link.textContent);
+            if (!isNaN(pageNumber)) {
+                // Gọi hàm chuyển đến trang số pageNumber ở đây
+                cooking.goToPage(pageNumber);
+            }
+        });
+    });
+});
+
+const cooking = {
+    cooks: [],
+    currentPage: 1, // Trang hiện tại
+    itemsPerPage: 22, // Số món ăn trên mỗi trang
+    //render
+    render: function(cooksToRender) {
+        const startIndex = (this.currentPage - 1) * this.itemsPerPage;
+        const endIndex = startIndex + this.itemsPerPage;
+        const visibleCooks = cooksToRender.slice(startIndex, endIndex);
+        const htmls = visibleCooks.map(cook => {
+            return `
+                <div class="grid__column-3">
+                    <div class="mainpage-item addplan-width">
+                        <div class="mainpage-item__link">
+                            <a href="${cook.path}">
+                                <img class="mainpage-item__img" src="${cook.image}" alt="${cook.name}">
+                            </a>
+                        </div>
+                        <div class="mainpage-item__info">
+                            <a href="${cook.path}">
+                                <h3 class="mainpage-item__info-text">${cook.name}</h3>
+                            </a>
+                            <div class="addplan-btn">
+                                <i class="fa-solid fa-plus"></i>
+                                Thêm
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        });
+
+        $('.mainpage-list').innerHTML = htmls.join('');
+
+        // add-plan
+        var close = document.querySelector('.addplan-close');
+        var addPlan = document.querySelector('.addplan');
+        var listPlanBtn = document.querySelectorAll('.plan-btn');
+        var addPlanBtn = document.querySelectorAll('.addplan-btn');
+        var addItem = document.querySelectorAll('.plan-box__cover1');
+        var check = [];
+
+        for(var k = 0; k < addItem.length; k++) {
+            var getSavePlan = localStorage.getItem("addContent" + k);
+            addItem[k].innerHTML = getSavePlan;
+        }
+
+        close.addEventListener('click', function () {
+            addPlan.style.visibility = "hidden";
+        });
+
+        for(var i = 0; i < listPlanBtn.length; i++) {
+            check[i] = false;
+        }
+
+        for (var i = 0; i < listPlanBtn.length; i++) {
+            listPlanBtn[i].addEventListener('click', (function (currentIndex) {
+                return function () {
+                    if (check[currentIndex]) {
+                        // event.preventDefault();
+                        listPlanBtn[i].removeEventListener("click", clickHandler);
+                    } else {
+                        addPlan.style.visibility = "visible";
+                        console.log(currentIndex);
+                        console.log("currentIndex up");
+                        for (var j = 0; j < addPlanBtn.length; j++) {
+                            addPlanBtn[j].addEventListener('click', (function (currentAddIndex) {
+                                return function () {
+                                    if (!check[currentIndex]) {
+                                        console.log(currentAddIndex);
+                                        console.log(check);
+                                        var targetAddItem = addItem[currentIndex];
+                                        targetAddItem.innerHTML = `
+                                            <div class="plan-box-close">
+                                                <i class="fa-solid fa-xmark"></i>
+                                            </div>
+                                            <a href="${cooksToRender[currentAddIndex].path}">
+                                                <img src="${cooksToRender[currentAddIndex].image}" alt="">
+                                            </a>
+                                            <div class="plan-box__title">
+                                                <a href="${cooksToRender[currentAddIndex].path}">${cooksToRender[currentAddIndex].name}</a>
+                                            </div>  
+                                        `;
+                                        check[currentIndex] = true;
+                                        alert("Thêm thành công!");    
+                                        // Sử dụng một sự kiện click cho nút đóng
+                                        var removePlan = targetAddItem.querySelector('.plan-box-close');
+                                        removePlan.addEventListener('click', function () {
+                                            messsageRemovePlan = confirm("Bạn có chắc muốn xóa món ăn này trong kế hoạch!");
+                                            if(messsageRemovePlan) {
+                                                targetAddItem.innerHTML = '';
+                                                check[currentIndex] = false;
+                                            }
+                                        });
+                                        var savePlan = document.querySelector('#savePlan');
+                                        savePlan.addEventListener('click', function() {
+                                            addItem.forEach(function (item, index) {
+                                            var content = item.outerHTML; // Lấy nội dung HTML của phần tử
+                                            localStorage.setItem("addContent" + index, content); // Lưu nội dung vào Local Storage với một khóa duy nhất cho mỗi phần tử
+                                            // console.log(localStorage);
+                                            });
+                                            alert("Lưu Thành Công!");
+                                        })
+                                    }
+                                }
+                            })(j));
+                        }
+                    }
+                };
+            })(i));
+        }
+
+   
+        console.log(check);
+        // Tạo trang trích dẫn
+        this.createPagination(cooksToRender.length);
+    },
+        createPagination: function(totalItems) {
+        const totalPages = Math.ceil(totalItems / this.itemsPerPage);
+        const paginationDiv = $('.pagination');
+        paginationDiv.innerHTML = '';
+
+        for (let i = 1; i <= totalPages; i++) {
+            const pageLink = document.createElement('a');
+            pageLink.href = '#';
+            pageLink.textContent = i;
+            pageLink.classList.add('page-numbers');
+
+            if (i === this.currentPage) {
+                pageLink.classList.add('current');
+            }
+
+            paginationDiv.appendChild(pageLink);
+        }
+    },
+
+    goToPage: function(pageNumber) {
+        this.currentPage = pageNumber;
+        this.render(this.cooks);
+    },
+
+    start: function() {
+
+        // Fetch the data from the JSON file
+        fetch('cooks-detail/datas/cooks.json')
+            .then(response => response.json())
+            .then(data => {
+                this.cooks = data; // Set the cooks array with the data
+                this.render(this.cooks); // Render the data
+            })
+            .catch(error => {
+                console.error('Error fetching data:', error);
+            });
+
+        const searchInput = $('#searchInput');
+        const searchButton = $('#searchButton');
+
+        // Xử lý tìm kiếm khi người dùng ấn Enter
+        searchInput.addEventListener('keyup', event => {
+            if (event.key === 'Enter') {
+                this.performSearch();
+            }
+        });
+
+        // Xử lý tìm kiếm khi người dùng nhấp vào nút tìm kiếm
+        searchButton.addEventListener('click', () => {
+            this.performSearch();
+        });
+
+        window.onload = function() {
+            // Lấy giá trị từ URL
+            var urlParams = new URLSearchParams(window.location.search);
+            var inputValue = urlParams.get('search');
+            console.log(inputValue);
+            if (inputValue) {
+                const searchResults = cooking.cooks.filter(cook => cook.name.toLowerCase().includes(inputValue));
+                cooking.render(searchResults);
+            }
+        }
+    },
+    
+    performSearch: function() {
+        this.currentPage = 1; // Reset trang về 1 sau khi tìm kiếm
+        const searchTerm = $('#searchInput').value.toLowerCase(); // Lấy từ khóa tìm kiếm
+
+        // Lọc danh sách các món ăn dựa trên từ khóa tìm kiếm
+        const searchResults = this.cooks.filter(cook => cook.name.toLowerCase().includes(searchTerm));
+
+        // Hiển thị kết quả tìm kiếm
+        this.render(searchResults);
+    },
+    // favourite    
+}
+
+    var searchInput = document.getElementById('searchInput-add');
+    var searchBtn = document.getElementById('searchButton-add');
+
+    searchInput.addEventListener('keyup', event => {
+        var inputValue = searchInput.value; // Lấy giá trị input tại thời điểm sự kiện keyup
+        if (event.key === 'Enter' && inputValue !== "") {
+            var encodedValue = encodeURIComponent(inputValue);
+            window.location.href = '/home.html?search=' + encodedValue;
+        }
+    });
+
+    searchBtn.addEventListener('click', function(event) {
+        var inputValue = searchInput.value; // Lấy giá trị input tại thời điểm nhấn nút tìm kiếm
+        if (inputValue !== "") {
+            var encodedValue = encodeURIComponent(inputValue);
+            window.location.href = '/home.html?search=' + encodedValue;
+        }
+    });
+
+    var urlParams = new URLSearchParams(window.location.search);
+    var nameValue = urlParams.get('name');
+    console.log(nameValue);
+    $('.login-name').innerHTML = nameValue;
+
+document.addEventListener('DOMContentLoaded', function () {
+    cooking.start();
+});
+console.log(localStorage);
+</script>
+
+<!-- <div class="plan-box__cover1">
+    <a href="/cooks-detail/cot-let-chien-sa-ot.html">
+     <img src="https://monngonmoingay.com/wp-content/uploads/2021/11/cot-let-chien-sa-ot-500.jpg" alt="">
+     </a>
+     <div class="plan-box__title">
+         <a href="/cooks-detail/cot-let-chien-sa-ot.html">Cốt lết chiên sả ớt</a>
+     </div>
+ </div> -->
+
+
+
+ <!-- // var close = document.querySelector('.addplan-close');
+        // var addPlan = document.querySelector('.addplan');
+        // var listPlanBtn = document.querySelectorAll('.plan-btn');
+        // var addPlanBtn = document.querySelectorAll('.addplan-btn');
+        // var addItem = document.querySelectorAll('.plan-box__cover1');
+        // var check = [];
+        // close.addEventListener('click', function () {
+        //     addPlan.style.visibility = "hidden";
+        // });
+
+        // for(var i = 0; i < listPlanBtn.length-1; i++) {
+        //     check[i] = false;
+        // }
+        // console.log(check);
+        // for (var i = 0; i < listPlanBtn.length; i++) {
+        //     listPlanBtn[i].addEventListener('click', (function (currentIndex) {
+        //         return function () {
+        //             if (check[currentIndex]) {
+        //                 event.preventDefault();
+        //             } else {
+        //                 addPlan.style.visibility = "visible";
+        //                 console.log(currentIndex);
+        //                 console.log("currentIndex up");
+        //                 for (var j = 0; j < addPlanBtn.length; j++) {
+        //                     addPlanBtn[j].addEventListener('click', (function (currentAddIndex) {
+        //                         return function () {
+        //                             if (!check[currentIndex]) {
+        //                                 console.log(currentAddIndex);
+        //                                 console.log(currentIndex + "+" + j);
+        //                                 console.log(check);
+        //                                 var targetAddItem = addItem[currentIndex];
+        //                                 targetAddItem.innerHTML = `
+        //                                     <a href="${cooksToRender[currentAddIndex].path}">
+        //                                         <img src="${cooksToRender[currentAddIndex].image}" alt="">
+        //                                     </a>
+        //                                     <div class="plan-box__title">
+        //                                         <a href="${cooksToRender[currentAddIndex].path}">${cooksToRender[currentAddIndex].name}</a>
+        //                                     </div>  
+        //                                 `;
+        //                                 check[currentIndex] = true;
+        //                             }
+        //                         }
+        //                     })(j));
+        //                 }
+        //             }
+        //         };
+        //     })(i));
+        // } -->
