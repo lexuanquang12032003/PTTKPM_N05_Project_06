@@ -33,11 +33,43 @@
                     </div>
                     <div class="grid__column-9">
                         <div class="header__top">
-                            <span class="login">Đăng Nhập</span>
+                            <!-- <span class="login">Đăng Nhập</span>
                             <span class="seperate">|</span>
                             <span class="register">
                                 <span href="" class="register-link">Đăng Ký</span>
+                            </span> -->
+                            <span class="login-hi">Xin Chào,</span>
+                            <img src="/assets/img/logophenikaa-uni.jpg" alt="" class="login-img">
+                            <span class="login-name"></span>
+                            <span class="login-icon">
+                                <i class="fa-solid fa-angle-down"></i>
                             </span>
+                            <ul class="login-menu">
+                                <li>
+                                    <a href="" class="login-menu-link">
+                                        <i class="fa-solid fa-user"></i>
+                                        Quản lý tài khoản
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/favourite.html" class="login-menu-link">
+                                        <i class="fa-solid fa-list-ul"></i>
+                                        Danh sách món ăn yêu thích
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/plan.html" class="login-menu-link">
+                                        <i class="fa-solid fa-clipboard-question"></i>
+                                        Hôm nay ăn gì?
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/login.html" class="login-menu-link">
+                                        <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                                        Thoát
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
                         <nav class="header__navbar">
                             <ul class="header__navbar-list">
@@ -317,6 +349,7 @@ const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 
 document.addEventListener('DOMContentLoaded', function () {
+
     // Lấy danh sách tất cả các liên kết trang
     var pageLinks = document.querySelectorAll('.page-numbers');
 

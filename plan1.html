@@ -740,15 +740,6 @@ const cooking = {
                                                 check[currentIndex] = false;
                                             }
                                         });
-                                        var savePlan = document.querySelector('#savePlan');
-                                        savePlan.addEventListener('click', function() {
-                                            addItem.forEach(function (item, index) {
-                                            var content = item.outerHTML; // Lấy nội dung HTML của phần tử
-                                            localStorage.setItem("addContent" + index, content); // Lưu nội dung vào Local Storage với một khóa duy nhất cho mỗi phần tử
-                                            // console.log(localStorage);
-                                            });
-                                            alert("Lưu Thành Công!");
-                                        })
                                     }
                                 }
                             })(j));
@@ -757,8 +748,33 @@ const cooking = {
                 };
             })(i));
         }
+        var savePlan = document.querySelector('#savePlan');
+        savePlan.addEventListener('click', function() {
+            addItem.forEach(function (item, index) {
+            var content = item.outerHTML; // Lấy nội dung HTML của phần tử
+            localStorage.setItem("addContent" + index, content); // Lưu nội dung vào Local Storage với một khóa duy nhất cho mỗi phần tử
+            // console.log(localStorage);
+            });
+            alert("Lưu Thành Công!");
+        })
 
-   
+
+        for (var i = 0; i < listPlanBtn.length; i++) {
+            var removePlan = addItem[i].querySelector('.plan-box-close');
+            attachRemoveHandler(removePlan, i); // Gọi hàm attachRemoveHandler với tham số i
+        }
+
+        function attachRemoveHandler(removePlan, currentIndex) {
+            removePlan.addEventListener('click', function () {
+                messsageRemovePlan = confirm("Bạn có chắc muốn xóa món ăn này trong kế hoạch!");
+                if (messsageRemovePlan) {
+                    addItem[currentIndex].innerHTML = ''; // Sử dụng currentIndex để xác định phần tử cần xóa
+                    check[currentIndex] = false;
+                }
+            });
+        }
+
+
         console.log(check);
         // Tạo trang trích dẫn
         this.createPagination(cooksToRender.length);

@@ -561,6 +561,9 @@
 </html>
 
 <script>
+    const $ = document.querySelector.bind(document)
+    const $$ = document.querySelectorAll.bind(document) 
+
     var searchInput = document.getElementById('searchInput');
     var searchBtn = document.getElementById('searchButton');
 
@@ -579,11 +582,6 @@
             window.location.href = '/home.html?search=' + encodedValue;
         }
     });
-
-    var urlParams = new URLSearchParams(window.location.search);
-    var nameValue = urlParams.get('name');
-    console.log(nameValue);
-    $('.login-name').innerHTML = nameValue;
 </script>
 
 

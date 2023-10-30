@@ -6,6 +6,20 @@ document.addEventListener("DOMContentLoaded", function () {
     var nameValue = urlParams.get('name');
     console.log(nameValue);
     $('.login-name').innerHTML = nameValue;
+    document.getElementById('plan-link').addEventListener('click', function(event) {
+        event.preventDefault(); // Ngăn chặn trình duyệt chuyển hướng mặc định
+        window.location.href = 'plan.html?name=' + encodeURIComponent(nameValue);
+    });
+    document.getElementById('spice-link').addEventListener('click', function(event) {
+        event.preventDefault(); // Ngăn chặn trình duyệt chuyển hướng mặc định
+        window.location.href = 'spice.html?name=' + encodeURIComponent(nameValue);
+    });
+    document.getElementById('favorite-link').addEventListener('click', function(event) {
+        event.preventDefault(); // Ngăn chặn trình duyệt chuyển hướng mặc định
+        window.location.href = 'favourite.html?name=' + encodeURIComponent(nameValue);
+    });
+    
+
 
     // Lấy danh sách tất cả các liên kết trang
     var pageLinks = document.querySelectorAll('.page-numbers');
@@ -49,12 +63,12 @@ const cooking = {
                 <div class="grid__column-3">
                     <div class="mainpage-item">
                         <div class="mainpage-item__link">
-                            <a href="${cook.path}">
+                            <a class="cook-link" href="${cook.path}">
                                 <img class="mainpage-item__img" src="${cook.image}" alt="${cook.name}">
                             </a>
                         </div>
                         <div class="mainpage-item__info">
-                            <a href="${cook.path}">
+                            <a class="cook-link" href="${cook.path}">
                                 <h3 class="mainpage-item__info-text">${cook.name}</h3>
                             </a>
                             <ul>
@@ -71,6 +85,7 @@ const cooking = {
             `;
         });
         $('.mainpage-list').innerHTML = htmls.join('');
+
 
         // Tạo trang trích dẫn
         this.createPagination(cooksToRender.length);
@@ -155,4 +170,5 @@ const cooking = {
     // favourite
 }
 cooking.start();
-
+    
+    

@@ -6,6 +6,7 @@
     <title>Document</title>
     <!-- <link rel="stylesheet" href="/assets/css/base.css"> -->
     <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="./assets//fonts/fontawesome-free-6.4.0-web/css/all.min.css">
 </head>
 <body>
     <div class="login-box">
@@ -22,14 +23,19 @@
                     <input id="login-email" type="text" class="login-form__input">
     
                     <div class="login-form__label">Mật khẩu:</div>
-                    <input id="login-matkhau" type="password" class="login-form__input">
+                    <div class="password-box">
+                        <input id="login-matkhau" type="password" class="login-form__input">
+                        <div class="eye">
+                            <i class="fa-regular fa-eye-slash"></i>
+                        </div>
+                    </div>
                     <div>
                         <button type="submit" id="login-btn" class="login-signup-btn">ĐĂNG NHẬP</button>
                     </div>
                     <div class="login-signup">
                         Bạn chưa có tài khoản?
                         <a class="link-signup" href="/signup.html">Đăng kí ngay</a>
-                    </div>
+                    </div> 
                 </form>
             </div>
         </div>
@@ -42,6 +48,8 @@
         var email = document.getElementById('login-email');
         var matKhau = document.getElementById('login-matkhau');
         var btn = document.getElementById('login-btn');
+        var passwordBox = document.querySelector('.password-box');
+        var eye = document.querySelector('.eye');
 
         btn.addEventListener('click', function(event) {
             if(localStorage.getItem(email.value)){
@@ -68,5 +76,18 @@
                 event.preventDefault();
             }
         });
+
+        var checkEye = false;
+        eye.addEventListener('click', function() {
+            if(!checkEye) {
+                matKhau.type = 'text';
+                eye.innerHTML = `<i class="fa-solid fa-eye"></i>`;
+                checkEye = true;
+            } else {
+                matKhau.type = 'password';
+                eye.innerHTML = `<i class="fa-solid fa-eye-slash"></i>`;
+                checkEye = false;
+            }
+        })
     });
 </script>

@@ -6,6 +6,7 @@
     <title>Document</title>
     <!-- <link rel="stylesheet" href="/assets/css/base.css"> -->
     <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="./assets//fonts/fontawesome-free-6.4.0-web/css/all.min.css">
 </head>
 <body>
     <div class="login-box">
@@ -25,7 +26,12 @@
                     <input id="signup-email" type="text" class="login-form__input">
                     
                     <div class="login-form__label">Mật khẩu:</div>
-                    <input id="signup-matkhau" type="password" class="login-form__input">
+                    <div class="password-box">
+                        <input id="signup-matkhau" type="password" class="login-form__input">
+                        <div class="eye">
+                            <i class="fa-regular fa-eye-slash"></i>
+                        </div>
+                    </div>
 
                     <button type="submit" id="signup-btn" class="login-signup-btn">ĐĂNG KÝ</button>
                     <div class="login-signup">
@@ -46,10 +52,24 @@
         var email = document.getElementById('signup-email');
         var matKhau = document.getElementById('signup-matkhau');
         var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zAZ0-9]{2,4})+$/;
+        var passwordBox = document.querySelector('.password-box');
+        var eye = document.querySelector('.eye');
+
+        var checkEye = false;
+        eye.addEventListener('click', function(event) {
+            if(!checkEye) {
+                matKhau.type = 'text';
+                eye.innerHTML = `<i class="fa-solid fa-eye"></i>`;
+                checkEye = true;
+            } else {
+                matKhau.type = 'password';
+                eye.innerHTML = `<i class="fa-solid fa-eye-slash"></i>`;
+                checkEye = false;
+            }
+        })
 
         btn.addEventListener('click', function(event) {
             let isValid = true; // Mặc định, thông tin đúng
-
             // Kiểm tra họ tên
             if (hoTen.value === '') {
                 alert("Hãy nhập họ tên!");
@@ -66,6 +86,23 @@
             if (matKhau.value.length < 6) {
                 alert("Mật khẩu tối thiểu 6 ký tự!");
                 isValid = false; // Đặt isValid thành false nếu có lỗi
+            }
+
+            // kiểm tra tồn tại
+            var isEmailExists = false;
+            for (var i = 0; i < localStorage.length; i++) {
+                var key = localStorage.key(i);
+                var userDataString = localStorage.getItem(key);
+                var userData = JSON.parse(userDataString);
+                if (userData.email === email.value) {
+                    isEmailExists = true;
+                    break;
+                }
+            }
+
+            if (isEmailExists) {
+                alert("Email đã tồn tại!");
+                isValid = false;
             }
 
             if (isValid) {
